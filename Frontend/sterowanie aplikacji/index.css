@@ -13,7 +13,7 @@
                             }
                             
                             .Page-outer {
-                                pointer-events: none;
+                                
                                 z-index: 1;
                             }
                             
@@ -23,9 +23,9 @@
                                 align-items: flex-start;
                                 padding: 0px;
                                 position: relative;
-                                margin-left: -20px;
-                                width: 1920px;
-                                height: 1024px;
+                                
+                                width: auto;
+                                height: auto;
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -34,25 +34,15 @@
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
                             }
                             
-                            .test {
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                            }
-                            
                             .Frame-outer {
-                                pointer-events: none;
+                                
                                 z-index: 2;
                             }
                             
                             .Ekran-1---Logowanie {
-                                position: relative;
-                                margin-left: -20px;
-                                width: 1920px;
-                                height: 1024px;
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
                                 background-repeat: no-repeat;
                                 background-size: cover;
                                 background-color: #ffffff;
@@ -61,31 +51,26 @@
                                 box-sizing: border-box;
                                 margin: 0 auto;
                                 justify-content: center;
-                                /*
-    padding-left: auto;
-    padding-right: auto;*/
                             }
                             
                             .Ekran-1---Logowanie-outer {
-                                pointer-events: none;
+                                
                                 z-index: 2;
                             }
                             
                             .Top-Bar-do-podmianki {
                                 position: relative;
                                 z-index: 5;
-                                pointer-events: none;
+                                
                                 margin-left: 0px;
-                                width: 1920px;
-                                min-width: 1920px;
-                                height: 136px;
+                                width: 100%;
+                                height: 100%;
                                 margin-top: 0px;
-                                margin-bottom: 888px;
                                 min-height: 136px;
                             }
                             
                             .Top-Bar-do-podmianki-outer {
-                                pointer-events: none;
+                                
                                 z-index: 5;
                                 position: relative;
                                 display: flex;
@@ -94,18 +79,18 @@
                             .Logo {
                                 position: relative;
                                 z-index: 11;
-                                pointer-events: none;
-                                margin-left: 1746px;
-                                width: 154px;
+                                margin-right: 0px;
+                                
+                                width: 100%;
                                 min-width: 154px;
-                                height: 136px;
+                                height: 100%;
                                 margin-top: 0px;
                                 margin-bottom: 0px;
                                 min-height: 136px;
                             }
                             
                             .Logo-outer {
-                                pointer-events: none;
+                                
                                 z-index: 11;
                                 position: relative;
                                 display: flex;
@@ -114,18 +99,18 @@
                             .Znak-Logo {
                                 position: relative;
                                 z-index: 13;
-                                pointer-events: none;
+                                
                                 margin-left: 50px;
                                 width: 144px;
                                 height: 134px;
-                                margin-top: -2px;
+                                margin-top: 0px;
                                 content: url(assets/images/Znak_Logo.png);
                             }
                             
                             .Znak-Logo-outer {
-                                pointer-events: none;
+                                
                                 z-index: 13;
-                                justify-content: center;
+                                justify-content:right;
                                 position: absolute;
                                 display: flex;
                                 width: 100%;
@@ -138,7 +123,7 @@
                             .T-o-Logo {
                                 position: relative;
                                 z-index: 12;
-                                pointer-events: none;
+                                
                                 margin-left: 36px;
                                 width: 154px;
                                 height: 136px;
@@ -147,9 +132,9 @@
                             }
                             
                             .T-o-Logo-outer {
-                                pointer-events: none;
+                                
                                 z-index: 12;
-                                justify-content: center;
+                                justify-content: right;
                                 position: absolute;
                                 display: flex;
                                 width: 100%;
@@ -162,7 +147,7 @@
                             .Logowanie {
                                 position: relative;
                                 z-index: 14;
-                                pointer-events: none;
+                                
                                 margin-left: 29px;
                                 width: 241px;
                                 min-width: 241px;
@@ -182,7 +167,7 @@
                             }
                             
                             .Logowanie-outer {
-                                pointer-events: none;
+                                
                                 z-index: 14;
                                 position: relative;
                                 display: flex;
@@ -191,7 +176,7 @@
                             .Lista-pracownik-w {
                                 position: relative;
                                 z-index: 7;
-                                pointer-events: none;
+                                
                                 margin-left: -1px;
                                 width: 325px;
                                 min-width: 325px;
@@ -203,7 +188,7 @@
                             }
                             
                             .Lista-pracownik-w-outer {
-                                pointer-events: none;
+                                
                                 z-index: 7;
                                 position: relative;
                                 display: flex;
@@ -212,7 +197,7 @@
                             .T-o-logowanie {
                                 position: relative;
                                 z-index: 8;
-                                pointer-events: none;
+                                
                                 transform: rotate(0deg);
                                 margin-left: 0px;
                                 width: 323.4px;
@@ -223,7 +208,7 @@
                             }
                             
                             .T-o-logowanie-outer {
-                                pointer-events: none;
+                                
                                 z-index: 8;
                                 justify-content: center;
                                 position: absolute;
@@ -238,7 +223,7 @@
                             .SYSTEM-CZASU-PRACY {
                                 position: relative;
                                 z-index: 10;
-                                pointer-events: none;
+                                
                                 margin-left: -884.9200000000001px;
                                 width: 442.08px;
                                 height: 58.22px;
@@ -256,7 +241,7 @@
                             }
                             
                             .SYSTEM-CZASU-PRACY-outer {
-                                pointer-events: none;
+                                
                                 z-index: 10;
                                 justify-content: center;
                                 position: absolute;
@@ -269,18 +254,20 @@
                             }
                             
                             .T-o-System-pracy {
-                                position: relative;
+                                position: absolute;
+                                top:0px;
+                                left:0px;
                                 z-index: 9;
-                                pointer-events: none;
-                                margin-left: -30px;
-                                width: 1890px;
-                                height: 82px;
-                                margin-top: -54px;
+                                
+                                width: 100%;
+                                height: 100%;
+                                max-height: 82px;
+                                
                                 background-color: rgba(154, 51, 242, 1);
                             }
                             
                             .T-o-System-pracy-outer {
-                                pointer-events: none;
+                                
                                 z-index: 9;
                                 justify-content: center;
                                 position: absolute;
@@ -295,19 +282,19 @@
                             .T-o-dolny-pasek {
                                 position: relative;
                                 z-index: 6;
-                                pointer-events: none;
-                                margin-left: -30px;
-                                width: 1890px;
-                                height: 136px;
+                                
+                                width: 100%;
+                                height: 100%;
                                 margin-top: 0px;
                                 background-color: rgba(196, 128, 254, 1);
+                                max-height: 120px;
                             }
                             
                             .T-o-dolny-pasek-outer {
-                                pointer-events: none;
+                                
                                 z-index: 6;
                                 justify-content: center;
-                                position: absolute;
+                                position: relative;
                                 display: flex;
                                 width: 100%;
                                 height: 100%;
@@ -321,11 +308,11 @@
                                 flex-direction: row;
                                 align-items: flex-start;
                                 padding: 84px 46px;
-                                position: absolute;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
                                 left: 300px;
-                                top: 300px;
+                                top: 50px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -350,15 +337,16 @@
                             }
                             
                             .tlo_czas_pracy {
+                                float:left;
                                 display: flex;
                                 flex-direction: row;
                                 align-items: flex-start;
                                 padding: 84px 46px;
-                                position: absolute;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
-                                left: 700px;
-                                top: 300px;
+                                left: 600px;
+                                top: -160px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -383,15 +371,16 @@
                             }
                             
                             .tlo_absencje {
+                                float:left;
                                 display: flex;
                                 flex-direction: row;
                                 align-items: flex-start;
                                 padding: 80px 35px;
-                                position: absolute;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
-                                left: 1100px;
-                                top: 300px;
+                                left: 700px;
+                                top: -160px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -416,15 +405,16 @@
                             }
                             
                             .tlo_generuj_grafik {
+                                float:left;
                                 display: flex;
                                 flex-direction: row;
                                 align-items: flex-start;
-                                padding: 84px 46px;
-                                position: absolute;
+                                padding: 80px 35px;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
-                                left: 1500px;
-                                top: 300px;
+                                left: 800px;
+                                top: -160px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -453,11 +443,11 @@
                                 flex-direction: row;
                                 align-items: flex-start;
                                 padding: 80px 0px;
-                                position: absolute;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
-                                left: 500px;
-                                top: 600px;
+                                left: -200px;
+                                top: 100px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -482,15 +472,16 @@
                             }
                             
                             .tlo_lista_pracownikow {
+                                float:left;
                                 display: flex;
                                 flex-direction: row;
                                 align-items: flex-start;
                                 padding: 80px 0px;
-                                position: absolute;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
-                                left: 900px;
-                                top: 600px;
+                                left: 760px;
+                                top: -110px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -515,15 +506,16 @@
                             }
                             
                             .tlo_wyloguj {
+                                float:left;
                                 display: flex;
                                 flex-direction: row;
                                 align-items: flex-start;
                                 padding: 84px 46px;
-                                position: absolute;
+                                position: relative;
                                 width: 219px;
                                 height: 210px;
-                                left: 1300px;
-                                top: 600px;
+                                left: 850px;
+                                top: -110px;
                                 border: 7px solid #6D3F8C;
                                 box-sizing: border-box;
                                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -545,4 +537,25 @@
                                 align-items: center;
                                 text-align: center;
                                 color: #6D3F8C;
+                            }
+                            .button_sterowanie_aplikacji{
+                                position: static;
+                                font-family: Roboto;
+                                font-style: normal;
+                                font-weight: normal;
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                color: #6D3F8C;
+                                border-radius: 0.5rem;
+                                border: none;
+                                background-color: Transparent;
+                                background-repeat:no-repeat;
+                                border: none;
+                                font-size: 36px;
+                                line-height: 50px;
+                                box-shadow: none;
+                                
+                                
+                                
                             }

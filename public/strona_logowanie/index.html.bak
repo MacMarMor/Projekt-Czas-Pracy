@@ -34,7 +34,7 @@
                                     <div class="Logo-outer">
                                         <div id="Logo" data-name="Logo" class="Logo">
                                             <div class="Znak-Logo-outer">
-                                                <img id="Znak-Logo" data-name="Znak Logo" alt="Znak Logo" class="Znak-Logo">
+                                                <img src="strona_logowanie/assets/images/Znak_Logo.png" id="Znak-Logo" data-name="Znak Logo" alt="Znak Logo" class="Znak-Logo">
                                             </div>
                                             <div class="T-o-Logo-outer">
                                                 <img id="T-o-Logo" data-name="Tło Logo" alt="Tło Logo" class="T-o-Logo">
@@ -75,28 +75,29 @@
                             <div>
                                 <div id="Tlo_haslo" data-name="Tlo_haslo" alt="Tlo_haslo" class="Tlo_haslo"></div>
                                 <div id="Wpisz_haslo" data-name="Wpisz_haslo" alt="Wpisz_haslo" class="Wpisz_haslo">
-                                    <div key="0">...</div>
+                                    <div contenteditable="true">...</div>
                                 </div>
                                 <div id="Tlo_logowanie" data-name="Tlo_logowanie" alt="Tlo_logowanie" class="Tlo_logowanie"></div>
                                 <div id="Wpisz_login" data-name="Wpisz_login" alt="Wpisz_login" class="Wpisz_login">
-                                    <div key="0">...</div>
+                                    <div contenteditable="true">...</div>
                                 </div>
 
                                 <div id="Tlo_panel_Login" data-name="Tlo_panel_Login" alt="Tlo_panel_Login" class="Tlo_panel_Login"></div>
                                 <div id="Opis_login" data-name="Opis_login" alt="Opis_login" class="Opis_login">
-                                    <div key="Login">Login</div>
+                                    <div contenteditable="true">Login</div>
                                 </div>
                                 <div id="Tlo_panel_haslo" data-name="Tlo_panel_haslo" alt="Tlo_panel_haslo" class="Tlo_panel_haslo"></div>
                                 <div id="Opis_haslo" data-name="Opis_haslo" alt="Opis_haslo" class="Opis_haslo">
-                                    <div key="Login">Hasło</div>
+                                    <div contenteditable="true">Hasło</div>
                                 </div>
-                                <div id="przycisk_login" data-name="przycisk_login" alt="przycisk_login" class="przycisk_login"></div>
+                                <di                                v id="przycisk_login" data-name="przycisk_login" alt="przycisk_login" class="przycisk_login"></di>
                                 <div id="tekst_przycisk_login" data-name="tekst_przycisk_login" alt="tekst_przycisk_login" class="tekst_przycisk_login">
-                                    <div key="Login">Login</div>
+                                    <form method="get" action="/sterowanie_aplikacji_ejs"><button class="button_sterowanie_aplikacji" type="submit">Login</button></form>
                                 </div>
                                 <div id="przycisk_haslo" data-name="przycisk_haslo" alt="przycisk_haslo" class="przycisk_haslo"></div>
                                 <div id="tekst_przycisk_haslo" data-name="tekst_przycisk_haslo" alt="tekst_przycisk_haslo" class="tekst_przycisk_haslo">
-                                    <div key="Login">Zapomniałeś hasła?</div>
+                                    <form method="get" action="/logowanie.ejs"><button class="button_sterowanie_aplikacji" type="submit">Zapomniałeś hasła ?</button></form>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html prefix="og: http://ogp.me/ns#" lang="en" style="height: 100%">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -16,13 +16,13 @@
     <meta name="generator" content="Quest">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabriela:400">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="strona_logowanie/index.css" />
 
-    <script src="index.js"></script>
-
+    <script src="strona_logowanie/index.js"></script>
 </head>
 
 <body class="websiteBody">
+
     <div class="Page-outer">
         <div id="Page" data-name="Page" class="Page">
             <div class="Frame-outer">
@@ -34,10 +34,10 @@
                                     <div class="Logo-outer">
                                         <div id="Logo" data-name="Logo" class="Logo">
                                             <div class="Znak-Logo-outer">
-                                                <img id="Znak-Logo" data-name="Znak Logo" alt="Znak Logo" class="Znak-Logo">
+                                                <img src="strona_logowanie/assets/images/Znak_Logo.png" id="Znak-Logo" data-name="Znak Logo" alt="Znak Logo" class="Znak-Logo">
                                             </div>
                                             <div class="T-o-Logo-outer">
-                                                <img id="T-o-Logo" data-name="Tło Logo" alt="Tło Logo" class="T-o-Logo">
+                                                <img src="strona_logowanie/assets/images/T_o_Logo.png" id="T-o-Logo" data-name="Tło Logo" alt="Tło Logo" class="T-o-Logo">
                                             </div>
                                         </div>
                                     </div>
@@ -69,9 +69,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="Logowanie-1-outer">
-                                <img id="Logowanie-1" data-name="Logowanie" class=" Logowanie-1 ">
-                            </div>
                             <div>
                                 <div id="Tlo_haslo" data-name="Tlo_haslo" alt="Tlo_haslo" class="Tlo_haslo"></div>
                                 <div id="Wpisz_haslo" data-name="Wpisz_haslo" alt="Wpisz_haslo" class="Wpisz_haslo">
@@ -94,7 +91,7 @@
                                 <div id="tekst_przycisk_login" data-name="tekst_przycisk_login" alt="tekst_przycisk_login" class="tekst_przycisk_login">
                                     <div key="Login">Login</div>
                                 </div>
-                                <div id="przycisk_haslo" data-name="przycisk_haslo" alt="przycisk_haslo" class="przycisk_haslo"></div>
+                                <div onclick="next()" id="przycisk_haslo" data-name="przycisk_haslo" alt="przycisk_haslo" class="przycisk_haslo"></div>
                                 <div id="tekst_przycisk_haslo" data-name="tekst_przycisk_haslo" alt="tekst_przycisk_haslo" class="tekst_przycisk_haslo">
                                     <div key="Login">Zapomniałeś hasła?</div>
                                 </div>
@@ -106,8 +103,8 @@
         </div>
 
     </div>
-
+    
+    <div id="test" onclick="next()">test button</div>
 
 </body>
-
 </html>

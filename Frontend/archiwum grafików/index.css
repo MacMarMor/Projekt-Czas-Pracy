@@ -1,160 +1,148 @@
-                                .websiteBody {
-                                    width: 100%;
-                                    height: auto;
-                                    margin: 0;
-                                }
+.websiteBody {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.Page {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    pointer-events: auto;
+}
+
+.Page-outer {
+    
+    z-index: 1;
+}
+
+.Frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: relative;
+    
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
                                 
-                                .Page {
-                                    display: block;
-                                    margin: auto;
-                                    width: 100%;
-                                    height: auto;
-                                    pointer-events: auto;
-                                }
+.Frame-outer {
+    
+    z-index: 2;
+}
                                 
-                                .Page-outer {
-                                    pointer-events: none;
-                                    z-index: 1;
-                                }
+.Ekran-1---Logowanie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.Ekran-1---Logowanie-outer {
+    
+    z-index: 2;
+}
                                 
-                                .Frame {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: flex-start;
-                                    padding: 0px;
-                                    position: relative;
-                                    margin-left: -20px;
-                                    width: 1920px;
-                                    height: 1024px;
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: cover;
-                                    border: 1px solid #000000;
-                                    box-sizing: border-box;
-                                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                                }
-                                
-                                .test {
-                                    position: relative;
-                                    width: 100%;
-                                    height: 100%;
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    background-size: cover;
-                                }
-                                
-                                .Frame-outer {
-                                    pointer-events: none;
-                                    z-index: 2;
-                                }
-                                
-                                .Ekran-1---Logowanie {
-                                    position: relative;
-                                    margin-left: -20px;
-                                    width: 1920px;
-                                    height: 1024px;
-                                    background-repeat: no-repeat;
-                                    background-size: cover;
-                                    background-color: #ffffff;
-                                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                                    border: 1px solid rgba(0, 0, 0, 1);
-                                    box-sizing: border-box;
-                                    margin: 0 auto;
-                                    justify-content: center;
-                                }
-                                
-                                .Ekran-1---Logowanie-outer {
-                                    pointer-events: none;
-                                    z-index: 2;
-                                }
-                                
-                                .Top-Bar-do-podmianki {
-                                    position: relative;
-                                    z-index: 5;
-                                    pointer-events: none;
-                                    margin-left: 0px;
-                                    width: 1920px;
-                                    min-width: 1920px;
-                                    height: 136px;
-                                    margin-top: 0px;
-                                    margin-bottom: 888px;
-                                    min-height: 136px;
-                                }
-                                
-                                .Top-Bar-do-podmianki-outer {
-                                    pointer-events: none;
-                                    z-index: 5;
-                                    position: relative;
-                                    display: flex;
-                                }
-                                
-                                .Logo {
-                                    position: relative;
-                                    z-index: 11;
-                                    pointer-events: none;
-                                    margin-left: 1746px;
-                                    width: 154px;
-                                    min-width: 154px;
-                                    height: 136px;
-                                    margin-top: 0px;
-                                    margin-bottom: 0px;
-                                    min-height: 136px;
-                                }
-                                
-                                .Logo-outer {
-                                    pointer-events: none;
-                                    z-index: 11;
-                                    position: relative;
-                                    display: flex;
-                                }
-                                
-                                .Znak-Logo {
-                                    position: relative;
-                                    z-index: 13;
-                                    pointer-events: none;
-                                    margin-left: 50px;
-                                    width: 144px;
-                                    height: 134px;
-                                    margin-top: -2px;
-                                    content: url(assets/images/Znak_Logo.png);
-                                }
-                                
-                                .Znak-Logo-outer {
-                                    pointer-events: none;
-                                    z-index: 13;
-                                    justify-content: center;
-                                    position: absolute;
-                                    display: flex;
-                                    width: 100%;
-                                    height: 100%;
-                                    left: 0;
-                                    top: 0;
-                                    align-items: center;
-                                }
-                                
-                                .T-o-Logo {
-                                    position: relative;
-                                    z-index: 12;
-                                    pointer-events: none;
-                                    margin-left: 36px;
-                                    width: 154px;
-                                    height: 136px;
-                                    margin-top: -1px;
-                                    content: url(assets/images/T_o_Logo.png);
-                                }
-                                
-                                .T-o-Logo-outer {
-                                    pointer-events: none;
-                                    z-index: 12;
-                                    justify-content: center;
-                                    position: absolute;
-                                    display: flex;
-                                    width: 100%;
-                                    height: 100%;
-                                    left: 0;
-                                    top: 0;
-                                    align-items: center;
-                                }
+.Top-Bar-do-podmianki {
+    position: relative;
+    z-index: 5;
+    
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    min-height: 136px;
+}
+
+.Top-Bar-do-podmianki-outer {
+    
+    z-index: 5;
+    position: relative;
+    display: flex;
+}
+
+.Logo {
+    position: relative;
+    z-index: 11;
+    margin-right: 0px;
+    
+    width: 100%;
+    min-width: 154px;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 136px;
+}
+
+.Logo-outer {
+    
+    z-index: 11;
+    position: relative;
+    display: flex;
+}
+
+.Znak-Logo {
+    position: relative;
+    z-index: 13;
+    
+    margin-left: 50px;
+    width: 144px;
+    height: 134px;
+    margin-top: 0px;
+    content: url(assets/images/Znak_Logo.png);
+}
+
+.Znak-Logo-outer {
+    
+    z-index: 13;
+    justify-content:right;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
+
+.T-o-Logo {
+    position: relative;
+    z-index: 12;
+    
+    margin-left: 36px;
+    width: 154px;
+    height: 136px;
+    margin-top: -1px;
+    content: url(assets/images/T_o_Logo.png);
+}
+
+.T-o-Logo-outer {
+    
+    z-index: 12;
+    justify-content: right;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
                                 
                                 .Grafik {
                                     position: relative;
@@ -174,7 +162,7 @@
                                     font-style: normal;
                                     font-family: Gabriela;
                                     font-weight: 400;
-                                    font-size: 24px;
+                                    font-size: 22px;;
                                     line-height: 31px;
                                 }
                                 
@@ -296,7 +284,7 @@
                                 }
                                 
                                 .SYSTEM-CZASU-PRACY-outer {
-                                    pointer-events: none;
+            
                                     z-index: 10;
                                     justify-content: center;
                                     position: absolute;
@@ -309,18 +297,20 @@
                                 }
                                 
                                 .T-o-System-pracy {
-                                    position: relative;
+                                    position: absolute;
+                                    top:0px;
+                                    left:0px;
                                     z-index: 9;
-                                    pointer-events: none;
-                                    margin-left: -30px;
-                                    width: 1890px;
-                                    height: 82px;
-                                    margin-top: -54px;
+                                    
+                                    width: 100%;
+                                    height: 100%;
+                                    max-height: 82px;
+                                    
                                     background-color: rgba(154, 51, 242, 1);
                                 }
                                 
                                 .T-o-System-pracy-outer {
-                                    pointer-events: none;
+                                    
                                     z-index: 9;
                                     justify-content: center;
                                     position: absolute;
@@ -332,15 +322,15 @@
                                     align-items: center;
                                 }
                                 
+                                                       
                                 .T-o-dolny-pasek {
                                     position: relative;
                                     z-index: 6;
-                                    pointer-events: none;
-                                    margin-left: -30px;
-                                    width: 1890px;
-                                    height: 136px;
+                                    width: 100%;
+                                    height: 100%;
                                     margin-top: 0px;
                                     background-color: rgba(196, 128, 254, 1);
+                                    max-height: 110px;
                                 }
                                 
                                 .T-o-dolny-pasek-outer {
@@ -354,8 +344,7 @@
                                     left: 0;
                                     top: 0;
                                     align-items: center;
-                                }
-                                
+                                } 
                                 .Panel_wyborlewo {
                                     position: absolute;
                                     width: 75px;
@@ -392,6 +381,7 @@
                                     top: 200px;
                                     background: #6D3F8C;
                                     border-radius: 50px 0px 0px 50px;
+                                    z-index: 10;
                                 }
                                 
                                 .tekst_miesiac {
@@ -410,6 +400,7 @@
                                     align-items: center;
                                     text-align: center;
                                     color: white;
+                                     z-index: 11;
                                 }
                                 
                                 .Panel_rok {
@@ -470,13 +461,17 @@
                                 
                                 .Ramka_glowna {
                                     position: absolute;
-                                    width: 1800px;
-                                    height: 700px;
-                                    left: 30px;
+                                    width: auto;
+                                    height: 100%;
+                                    max-height: 500px;
+                                    max-width:1000px;
+                                    left: 20px;
                                     top: 270px;
                                     background: #FFFFFF;
-                                    border: 1px solid #000000;
-                                    box-sizing: border-box;
+                                    background-color: Transparent;
+                                    background-repeat:no-repeat;
+                                    
+                                    
                                 }
                                 
                                 .pole_imie {
@@ -596,14 +591,15 @@
                                 }
                                 
                                 .Ramka_danych {
-                                    position: absolute;
-                                    width: 806px;
-                                    height: 619px;
-                                    left: 0px;
-                                    top: 80px;
-                                    background: #FFFFFF;
-                                    border: 1px solid #000000;
-                                    box-sizing: border-box;
+                                    position: relative;
+                                 width: 820px;
+                                height: 400px;
+                            left: -1px;
+                            top: 80px;
+                            background: #FFFFFF;
+                            background-color: Transparent;
+                                    background-repeat:no-repeat;
+                            
                                 }
                                 
                                 .pole_imie1 {
@@ -627,7 +623,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -656,7 +652,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -685,7 +681,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -714,7 +710,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -743,7 +739,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -772,7 +768,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -801,7 +797,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -830,7 +826,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -859,7 +855,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -888,7 +884,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -917,7 +913,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -946,7 +942,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -975,7 +971,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1004,7 +1000,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1033,7 +1029,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1062,7 +1058,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1091,7 +1087,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1120,7 +1116,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1149,7 +1145,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1178,7 +1174,7 @@
                                     font-family: Roboto;
                                     font-style: normal;
                                     font-weight: normal;
-                                    font-size: 25px;
+                                    font-size: 22px;;
                                     line-height: 23px;
                                     display: flex;
                                     align-items: center;
@@ -1207,4 +1203,78 @@
                                     border: 1px solid #9A33F2;
                                     box-sizing: border-box;
                                     border-radius: 50px;
+                                }
+                                .button_sterowanie_aplikacji{
+                                    position: static;
+                                    font-family:Gabriela ;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: center;
+                                    color: #ffffff;
+                                    border-radius: 0.5rem;
+                                    border: none;
+                                    background-color: Transparent;
+                                    background-repeat:no-repeat;
+                                    border: none;
+                                    font-weight: 400;
+                                    font-size: 22px;;
+                                    line-height: 31px;
+                                    box-shadow: none;
+                                    margin-left: 60px;
+                                    
+                                    
+                                    
+                                }
+                                .button_sterowanie_aplikacji2{
+                                    position: static;
+                                    font-family: Roboto;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: center;
+                                    color: #ffffff;
+                                    border-radius: 0.5rem;
+                                    border: none;
+                                    background-color: Transparent;
+                                    background-repeat:no-repeat;
+                                    border: none;
+                                    font-size: 36px;
+                                    line-height: 50px;
+                                    box-shadow: none;
+                                    z-index: 15;
+                                }
+                                .button_sterowanie_aplikacji3{
+                                    position: static;
+                                    font-family: Roboto;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: center;
+                                    color: black;
+                                    border-radius: 0.5rem;
+                                    border: none;
+                                    background-color: Transparent;
+                                    background-repeat:no-repeat;
+                                    border: none;
+                                    box-shadow: none;
+                                    z-index: 15;
+                                    position: absolute;
+                                    padding: 0px 45px;
+                                    width: 203px;
+                                    height: 56px;
+                                    left: 0px;
+                                    top: 0px;
+                                    font-family: Roboto;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 22px;
+                                    line-height: 23px;
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: center;
+                                    color: #000000;
                                 }

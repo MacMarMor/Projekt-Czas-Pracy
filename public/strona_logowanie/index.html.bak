@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html prefix="og: http://ogp.me/ns#" lang="en" style="height: 100%">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5" />
+
+    <title>frame1</title>
+    <meta name="description" content="frame1 Description">
+    <meta property="og:title" content="frame1">
+    <meta property="og:description" content="frame1 Description">
+    <meta name="generator" content="Quest">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabriela:400">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="index.js"></script>
+
+</head>
+
+<body class="websiteBody">
+    <div class="Page-outer">
+        <div id="Page" data-name="Page" class="Page">
+            <div class="Frame-outer">
+                <div id="Frame" data-name="Frame 1" class="Frame">
+                    <div class="Ekran-1---Logowanie-outer">
+                        <div id="Ekran-1---Logowanie" data-name="Ekran 1 - Logowanie" class="Ekran-1---Logowanie">
+                            <div class="Top-Bar-do-podmianki-outer">
+                                <div id="Top-Bar-do-podmianki" data-name="Top Bar do podmianki" class="Top-Bar-do-podmianki">
+                                    <div class="Logo-outer">
+                                        <div id="Logo" data-name="Logo" class="Logo">
+                                            <div class="Znak-Logo-outer">
+                                                <img id="Znak-Logo" data-name="Znak Logo" alt="Znak Logo" class="Znak-Logo">
+                                            </div>
+                                            <div class="T-o-Logo-outer">
+                                                <img id="T-o-Logo" data-name="Tło Logo" alt="Tło Logo" class="T-o-Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Logowanie-outer">
+                                        <div id="Logowanie" data-name="Logowanie" class="Logowanie">
+                                            <div key="0">Logowanie</div>
+                                        </div>
+                                    </div>
+                                    <div class="Lista-pracownik-w-outer">
+                                        <div id="Lista-pracownik-w" data-name="Lista pracowników" class="Lista-pracownik-w">
+                                            <div class="T-o-logowanie-outer">
+                                                <div id="T-o-logowanie" data-name="Tło logowanie" alt="Tło logowanie" class="T-o-logowanie">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="SYSTEM-CZASU-PRACY-outer">
+                                        <div id="SYSTEM-CZASU-PRACY" data-name="SYSTEM CZASU PRACY" class="SYSTEM-CZASU-PRACY">
+                                            <div key="0">SYSTEM CZASU PRACY</div>
+                                        </div>
+                                    </div>
+                                    <div class="T-o-System-pracy-outer">
+                                        <div id="T-o-System-pracy" data-name="Tło System pracy" alt="Tło System pracy" class="T-o-System-pracy">
+                                        </div>
+                                    </div>
+                                    <div class="T-o-dolny-pasek-outer">
+                                        <div id="T-o-dolny-pasek" data-name="Tło dolny pasek" alt="Tło dolny pasek" class="T-o-dolny-pasek">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Logowanie-1-outer">
+                                <img id="Logowanie-1" data-name="Logowanie" class=" Logowanie-1 ">
+                            </div>
+                            <div>
+                                <div id="Tlo_haslo" data-name="Tlo_haslo" alt="Tlo_haslo" class="Tlo_haslo"></div>
+                                <div id="Wpisz_haslo" data-name="Wpisz_haslo" alt="Wpisz_haslo" class="Wpisz_haslo">
+                                    <div key="0">...</div>
+                                </div>
+                                <div id="Tlo_logowanie" data-name="Tlo_logowanie" alt="Tlo_logowanie" class="Tlo_logowanie"></div>
+                                <div id="Wpisz_login" data-name="Wpisz_login" alt="Wpisz_login" class="Wpisz_login">
+                                    <div key="0">...</div>
+                                </div>
+
+                                <div id="Tlo_panel_Login" data-name="Tlo_panel_Login" alt="Tlo_panel_Login" class="Tlo_panel_Login"></div>
+                                <div id="Opis_login" data-name="Opis_login" alt="Opis_login" class="Opis_login">
+                                    <div key="Login">Login</div>
+                                </div>
+                                <div id="Tlo_panel_haslo" data-name="Tlo_panel_haslo" alt="Tlo_panel_haslo" class="Tlo_panel_haslo"></div>
+                                <div id="Opis_haslo" data-name="Opis_haslo" alt="Opis_haslo" class="Opis_haslo">
+                                    <div key="Login">Hasło</div>
+                                </div>
+                                <div id="przycisk_login" data-name="przycisk_login" alt="przycisk_login" class="przycisk_login"></div>
+                                <div id="tekst_przycisk_login" data-name="tekst_przycisk_login" alt="tekst_przycisk_login" class="tekst_przycisk_login">
+                                    <div key="Login">Login</div>
+                                </div>
+                                <div id="przycisk_haslo" data-name="przycisk_haslo" alt="przycisk_haslo" class="przycisk_haslo"></div>
+                                <div id="tekst_przycisk_haslo" data-name="tekst_przycisk_haslo" alt="tekst_przycisk_haslo" class="tekst_przycisk_haslo">
+                                    <div key="Login">Zapomniałeś hasła?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

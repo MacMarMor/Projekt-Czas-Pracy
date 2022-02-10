@@ -37,7 +37,7 @@
                                                 <img src="sterowanie_aplikacji/assets/images/Znak_Logo.png" id="Znak-Logo" data-name="Znak Logo" alt="Znak Logo" class="Znak-Logo">
                                             </div>
                                             <div class="T-o-Logo-outer">
-                                                <img src="sterowanie_aplikacji/assets/images/T_o_Logo.png" id="T-o-Logo" data-name="Tło Logo" alt="Tło Logo" class="T-o-Logo">
+                                                <img id="T-o-Logo" data-name="Tło Logo" alt="Tło Logo" class="T-o-Logo">
                                             </div>
                                         </div>
                                     </div>

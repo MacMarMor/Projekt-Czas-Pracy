@@ -25,3 +25,62 @@ app.post('/login', (req, res) => {
     //check data with db
     res.render('pages/sterowanie_aplikacji_ejs')
 });
+
+//baza danych
+const MongoClient = require('mongodb').MongoClient
+
+const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
+const dbname = "Test1"
+
+class Date
+{
+    constructor(year, month, day)
+    {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }
+}
+
+class Time
+{
+    constructor(hour, minute, second, nano)
+    {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+        this.nano = nano;
+    }
+}
+
+class startPracy {
+    constructor(Date, Time) {
+        this.date = Date;
+        this.godzina = Time;
+    }
+
+}
+
+class dniPracy {
+    constructor(Date, Time, iloscPrzepracowanychGodzin)
+    {
+        this.startPracy = new startPracy(Date, Time);
+        this.iloscPrzepracowanychGodzin = iloscPrzepracowanychGodzin;
+    }
+}
+
+a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
+
+MongoClient.connect(url, {}, (error, client)=>{
+    if (error) { console.log("not ok")}
+
+    const db = client.db(dbname)
+
+    query = {id:1}
+
+    res = db.collection("test1").find({}).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
+      });
+
+})

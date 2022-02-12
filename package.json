@@ -13,7 +13,7 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.15.2",
-    "mongodb": "lastest",
+    "mongodb": "2.0.14",
     "mongoose": "~4.4",
     "bson": "1.1.5"
   },
@@ -32,4 +32,3 @@
   ],
   "license": "MIT"
 }
-1.1.5

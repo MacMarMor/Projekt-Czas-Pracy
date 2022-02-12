@@ -15,7 +15,7 @@
     "express": "^4.15.2",
     "mongodb": "2.0.14",
     "mongoose": "~4.4",
-    "bson": "4.5.0"
+    "bson": "1.1.5"
   },
   "devDependencies": {
     "got": "^11.3.0",

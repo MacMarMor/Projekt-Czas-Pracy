@@ -29,7 +29,7 @@ app.post('/login', (req, res) => {
 //baza danych
 const MongoClient = require('mongodb').MongoClient
 
-//const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
+const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
 const dbname = "Test1"
 
 class Date

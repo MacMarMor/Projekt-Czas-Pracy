@@ -71,16 +71,16 @@ class dniPracy {
 
 a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
 
-MongoClient.connect(url, {}, (error, client)=>{
-    if (error) { console.log("not ok")}
-console.log("almoost ok")
-    const db = client.db(dbname)
-
-    query = {id:1}
-
-    res = db.collection("test1").find({}).toArray(function(err, result) {
-        if (err) throw err;
-        console.log(result);
-      });
-
-})
+//MongoClient.connect(url, {}, (error, client)=>{
+//    if (error) { console.log("not ok")}
+//console.log("almoost ok")
+//    const db = client.db(dbname)
+//
+//    query = {id:1}
+//
+//    res = db.collection("test1").find({}).toArray(function(err, result) {
+//        if (err) throw err;
+//        console.log(result);
+//      });
+//
+//})

@@ -14,11 +14,11 @@
     <meta property="og:title" content="frame1">
     <meta property="og:description" content="frame1 Description">
     <meta name="generator" content="Quest">
-
+    <link rel="stylesheet" href="czas_pracy/clear-css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabriela:400">
     <link rel="stylesheet" href="czas_pracy/index.css">
 
-    <script src="czas_pracy/index.js"></script>
+    <script src="index.js"></script>
 
 </head>
 
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="Grafik-outer">
                                         <div id="Grafik" data-name="Grafik" class="Grafik">
-                                            <div key="0">Grafik</div>
+                                            <form method="get" action="/grafik.ejs"><button class="button_sterowanie_aplikacji" type="submit">Grafik</button></form>
                                         </div>
                                     </div>
                                     <div class="Lista-pracownik-w-outer">
@@ -67,7 +67,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    7
+                                    
                                     <div class="SYSTEM-CZASU-PRACY-outer ">
                                         <div id="SYSTEM-CZASU-PRACY " data-name="SYSTEM CZASU PRACY " class="SYSTEM-CZASU-PRACY ">
                                             <div key="0 ">SYSTEM CZASU PRACY</div>
@@ -83,30 +83,27 @@
                                     </div>
                                     <div id="Panel_wyborlewo" data-name="Panel_wyborlewo" alt="Panel_wyborlewo" class="Panel_wyborlewo">
                                         <div id="Znak_lewo" data-name="Znak_lewo" alt="Znak_lewo" class="Znak_lewo">
-                                            <div key="0">
-                                                < </div>
+                                            <form method="get" action="/logowanie.ejs"><button class="button_sterowanie_aplikacji2" type="submit"><</button></form>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="Panel_miesiac" data-name="Panel_miesiac" alt="Panel_miesiac" class="Panel_miesiac">
                                         <div id="tekst_miesiac" data-name="tekst_miesiac" alt="tekst_miesiac" class="tekst_miesiac">
-                                            <div key="0">
-                                                Grudzień </div>
+                                            <form method="get" action="grafik_ejs"><button class="button_sterowanie_aplikacji2" type="submit">Grudzień</button></form>
                                         </div>
                                     </div>
                                     <div id="Panel_rok" data-name="Panel_rok" alt="Panel_rok" class="Panel_rok">
                                         <div id="tekst_rok" data-name="tekst_rok" alt="tekst_rok" class="tekst_rok">
-                                            <div key="0">
-                                                2021 </div>
+                                            <form method="get" action="/logowanie.ejs"><button class="button_sterowanie_aplikacji2" type="submit">2021</button></form>
                                         </div>
                                     </div>
                                     <div id="Panel_wyborprawo" data-name="Panel_wyborprawo" alt="Panel_wyborprawo" class="Panel_wyborprawo">
                                         <div id="Znak_prawo" data-name="Znak_prawo" alt="Znak_prawo" class="Znak_prawo">
-                                            <div key="0">
-                                                > </div>
+                                            <form method="get" action="/logowanie.ejs"><button class="button_sterowanie_aplikacji2" type="submit">></button></form>
                                         </div>
                                     </div>
                                     <div id="Ramka_glowna" data-name="Ramka_glowna" alt="Ramka_glowna" class="Ramka_glowna">
+                                        
                                         <div id="pole_data" data-name="pole_data" alt="pole_data" class="pole_data">
                                             <div id="kategoria_data" data-name="kategoria_data" alt="kategoria_data" class="kategoria_data">
                                                 <div key="0"> Data </div>
@@ -119,7 +116,7 @@
                                                                 <div id="pole_wstawiony" data-name="pole_wstawiony" alt="pole_wstawiony" class="pole_wstawiony">
                                                                     <div id="kategoria_wstawiony" data-name="kategoria_wstawiony" alt="kategoria_wstawiony" class="kategoria_wstawiony">
                                                                         <div key="0"> Wstawiony </div>
-
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -235,8 +232,8 @@
                                                 </div>
                                             </div>
 
-                                            <div id="suwak_obudowa" data-name="suwak_obudowa" alt="suwak_obudowa" class="suwak_obudowa"></div>
-                                            <div id="suwak" data-name="suwak" alt="suwak" class="suwak"></div>
+                                            <!-- <div id="suwak_obudowa" data-name="suwak_obudowa" alt="suwak_obudowa" class="suwak_obudowa"></div>
+                                            <div id="suwak" data-name="suwak" alt="suwak" class="suwak"></div> -->
                                         </div>
                                     </div>
                                 </div>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html prefix="og: http://ogp.me/ns#" lang="en" style="height: 100%">
+
 <head>
-  
-  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -16,7 +16,8 @@
     <meta name="generator" content="Quest">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabriela:400">
-    <link rel="stylesheet" type="text/css" href="sterowanie_aplikacji/index.css" />
+    <link rel="stylesheet" href="sterowanie_aplikacji/clear-css.css">
+    <link rel="stylesheet" href="sterowanie_aplikacji/index.css">
 
     <script src="sterowanie_aplikacji/index.js"></script>
 </head>
@@ -68,39 +69,45 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="Logowanie-1-outer">
+<!--                                <img id="Logowanie-1" data-name="Logowanie" class=" Logowanie-1 ">-->
+                            </div>
                             <div id="tlo_grafik" data-name="tlo_grafik" alt="tlo_grafik" class="tlo_grafik">
                                 <div id="grafik_panel" data-name="grafik_panel" alt="grafik_panel" class="grafik_panel">
-                                    <div key="0">Grafik</div>
+                                    <form method="get" action="/grafik_ejs"><button class="button_sterowanie_aplikacji" type="submit">grafik</button></form>
                                 </div>
                             </div>
+                            
                             <div id="tlo_czas_pracy" data-name="tlo_czas_pracy" alt="tlo_czas_pracy" class="tlo_czas_pracy">
+                                
                                 <div id="czas_pracy_panel" data-name="czas_pracy_panel" alt="czas_pracy_panel" class="czas_pracy_panel">
-                                    <div key="0">Czas pracy</div>
-                                </div>
+                                    <form method="get" action="/czas_pracy_ejs"><button class="button_sterowanie_aplikacji" type="submit">czas pracy</button></form>
+                                </div> 
                             </div>
+                            
                             <div id="tlo_absencje" data-name="tlo_absencje" alt="tlo_absencje" class="tlo_absencje">
                                 <div id="absencje_panel" data-name="absencje_panel" alt="absencje_panel" class="absencje_panel">
-                                    <div key="0">Absencje</div>
+                                    <form method="get" action="/absencje_ejs"><button class="button_sterowanie_aplikacji" type="submit">absencje</button></form>
                                 </div>
                             </div>
                             <div id="tlo_generuj_grafik" data-name="tlo_generuj_grafik" alt="tlo_generuj_grafik" class="tlo_generuj_grafik">
                                 <div id="generuj_grafik_panel" data-name="generuj_grafik_panel" alt="generuj_grafik_panel" class="generuj_grafik_panel">
-                                    <div key="0">Generuj grafik</div>
+                                    <form method="get" action="/generuj_grafik_ejs"><button class="button_sterowanie_aplikacji" type="submit">generuj grafik</button></form>
                                 </div>
                             </div>
                             <div id="tlo_archiwum_grafikow" data-name="tlo_archiwum_grafikow" alt="tlo_archiwum_grafikow" class="tlo_archiwum_grafikow">
                                 <div id="archiwum_grafikow_panel" data-name="archiwum_grafikow_panel" alt="archiwum_grafikow_panel" class="generuj_grafik_panel">
-                                    <div key="0">Archiwum grafików</div>
+                                    <form method="get" action="/archiwum_grafikow_ejs"><button class="button_sterowanie_aplikacji" type="submit">archiwum grafikow</button></form>
                                 </div>
                             </div>
                             <div id="tlo_lista_pracownikow" data-name="tlo_lista_pracownikow" alt="tlo_lista_pracownikow" class="tlo_lista_pracownikow">
                                 <div id="lista_pracownikow_panel" data-name="lista_pracownikow_panel" alt="lista_pracownikow_panel" class="lista_pracownikow_panel">
-                                    <div key="0">Lista pracowników</div>
+                                    <form method="get" action="/lista_pracownikow_ejs"><button class="button_sterowanie_aplikacji" type="submit">lista pracownikow</button></form>
                                 </div>
                             </div>
                             <div id="tlo_wyloguj" data-name="tlo_wyloguj" alt="tlo_wyloguj" class="tlo_wyloguj">
                                 <div id="wyloguj_panel" data-name="wyloguj_panel" alt="wyloguj_panel" class="wyloguj_panel">
-                                    <div key="0">Wyloguj</div>
+                                    <form method="get" action="/wyloguj_ejs"><button class="button_sterowanie_aplikacji" type="submit">wyloguj</button></form>
                                 </div>
                             </div>
                         </div>
@@ -110,23 +117,6 @@
 
         </div>
     </div>
-
-    <div id="test grafik" onclick="next_grafik()">test grafik</div><br>
-
-    <div id="test czas pracy" onclick="next_czas_pracy()">test czas pracy</div><br>
-
-    <div id="test absencje" onclick="next_absencje()">test absencje</div><br>
-
-    <div id="test grafik" onclick="next_grafik()">test grafik</div><br>
-
-
-    <div id="test generuj grafik" onclick="next_generuj_grafik()">test generuj grafik</div><br>
-
-    <div id="test archiwum grafikow" onclick="next_archiwum_grafikow()">test archiwum grafikow</div><br>
-
-    <div id="test lista pracownikow" onclick="next_lista_pracownikow()">test lista pracownikow ???</div><br>
-
-    <div id="test wyloguj" onclick="next_wyloguj()">test wyloguj</div>
 
 
 </body>

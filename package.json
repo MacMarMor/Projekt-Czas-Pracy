@@ -13,9 +13,7 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.15.2",
-    "pg": "~4.4.x",
-    "mongodb": "2.0.14",
-    "mongodb-core": "~1.0"
+    "mongodb": "2.0.14"
   },
   "devDependencies": {
     "got": "^11.3.0",

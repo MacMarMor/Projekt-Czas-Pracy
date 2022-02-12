@@ -69,7 +69,7 @@ class dniPracy {
     }
 }
 
-a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
+//a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
 
 MongoClient.connect(url, {}, (error, client)=>{
     if (error) { console.log("not ok")}

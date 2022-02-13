@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const app = express();
 console.log('here work');
-var EmployeesScheduler = require('./EmployeesScheduler');   
+const EmployeesScheduler = require('./EmployeesScheduler.js');   
 var EmpS = new EmployeesScheduler();
 //import EmployeesScheduler from './EmployeesScheduler.mjs';
 //let EmpS = new EmployeesScheduler();

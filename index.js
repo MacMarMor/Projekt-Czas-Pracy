@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
+const EmployeesScheduler = require('./EmployeesScheduler.js');  
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const app = express();
-console.log('here work');
-const EmployeesScheduler = require('./EmployeesScheduler.js');   
+ 
 var EmpS = new EmployeesScheduler();
 //import EmployeesScheduler from './EmployeesScheduler.mjs';
 //let EmpS = new EmployeesScheduler();

@@ -53,7 +53,8 @@ app.post('/generate', (req, res) => {
 const MongoClient = require('mongodb').MongoClient
 
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
-const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net:5000/Test1"
+//const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net:5000/Test1"
+const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const dbname = "Test1";
 
 class Date
@@ -104,15 +105,15 @@ try {
             console.log("not ok "+error);
         } else {
             const db = client.db(dbname)
-    //
-    //    query = {id:1}
-    //
-    //    res = db.collection("test1").find({}).toArray(function(err, result) {
-    //        if (err) throw err;
-    //        console.log(result);
-    //      });
-    //
-        console.error("connect db");
+    
+            query = {id:1}
+
+            res = db.collection("test1").find({}).toArray(function(err, result) {
+                if (err) throw err;
+                console.log(result);
+              });
+
+            console.error("connect db");
         }
     })
 } catch (error) {

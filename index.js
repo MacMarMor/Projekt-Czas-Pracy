@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const app = express();
 console.log('here work');
-import EmployeesScheduler from './EmployeesScheduler.mjs';
-let EmpS = new EmployeesScheduler();
+var EmployeesScheduler = require('./EmployeesScheduler');   
+var EmpS = new EmployeesScheduler();
+//import EmployeesScheduler from './EmployeesScheduler.mjs';
+//let EmpS = new EmployeesScheduler();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

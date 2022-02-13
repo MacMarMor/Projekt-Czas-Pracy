@@ -1,4 +1,6 @@
-export default class EmployeesScheduler {
+module.exports = EmployeesScheduler;
+
+class EmployeesScheduler {
     
     EMPLOYEE = new Array;
     MINIMUMSTAFF = new Array;

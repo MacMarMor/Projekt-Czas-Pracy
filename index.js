@@ -56,7 +56,7 @@ const MongoClient = require('mongodb').MongoClient
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net:5000/Test1"
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/?ssl=true&replicaSet=&authSource=admin&retryWrites=true&w=majority"
-const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+//const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const dbname = "Test1";
 
 class Date
@@ -103,21 +103,10 @@ a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8
 var uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
 
-//MongoClient.connect(uri, function(err, client) {
-//  //const collection = client.db("test").collection("devices");
-//  // perform actions on the collection object
-//    
-//        console.error("buka db");
-//  client.close();
-//});
-
-
-
-
-try {
-    MongoClient.connect(url, {}, (error, client)=>{
-        
-        console.error("connect db");
+MongoClient.connect(uri, function(err, client) {
+  //const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+    console.error("connect db");
         if (error) { 
             console.log("not ok "+error);
         } else {
@@ -132,10 +121,35 @@ try {
 
             console.error("connect db");
         }
-    })
-} catch (error) {
-  console.error("error db");
-  console.error(error);
+//        console.error("buka db");
+//  client.close();
+});
+
+
+
+
+//try {
+//    MongoClient.connect(url, {}, (error, client)=>{
+//        
+//        console.error("connect db");
+//        if (error) { 
+//            console.log("not ok "+error);
+//        } else {
+//            const db = client.db(dbname)
+//    
+//            query = {id:1}
+//
+//            res = db.collection("test1").find({}).toArray(function(err, result) {
+//                if (err) throw err;
+//                console.log(result);
+//              });
+//
+//            console.error("connect db");
+//        }
+//    })
+//} catch (error) {
+//  console.error("error db");
+//  console.error(error);
   // expected output: ReferenceError: nonExistentFunction is not defined
   // Note - error messages will vary depending on browser
 }

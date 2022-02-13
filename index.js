@@ -54,7 +54,7 @@ const MongoClient = require('mongodb').MongoClient
 
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net:5000/Test1"
-const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const dbname = "Test1";
 
 class Date
@@ -96,20 +96,6 @@ class dniPracy {
 
 console.log("test log");
 a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
-//hj
-
-
-//const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-    console.error("buka db");
-  client.close();
-});
-
-
 
 try {
     MongoClient.connect(url, {}, (error, client)=>{

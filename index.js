@@ -100,9 +100,10 @@ try {
     MongoClient.connect(url, {}, (error, client)=>{
         
         console.error("connect db");
-        if (error) { console.log("not ok "+error)}
-    
-        const db = client.db(dbname)
+        if (error) { 
+            console.log("not ok "+error);
+        } else {
+            const db = client.db(dbname)
     //
     //    query = {id:1}
     //
@@ -112,6 +113,7 @@ try {
     //      });
     //
         console.error("connect db");
+        }
     })
 } catch (error) {
   console.error("error db");

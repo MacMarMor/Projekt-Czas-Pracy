@@ -129,37 +129,37 @@ var uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27
 //  console.error(error);
 //}
 
-MongoClient.connect(uri, function(err, client) {
-            console.log("not ok "+err);
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-    
-  client.close();
-});
-
-
-//try {
-//    MongoClient.connect(url, {}, (error, client)=>{
-//        
-//        console.error("connect db");
-//        if (error) { 
-//            console.log("not ok "+error);
-//        } else {
-//            const db = client.db(dbname)
+//MongoClient.connect(uri, function(err, client) {
+//            console.log("not ok "+err);
+//  const collection = client.db("test").collection("devices");
+//  // perform actions on the collection object
 //    
-//            query = {id:1}
-//
-//            res = db.collection("test1").find({}).toArray(function(err, result) {
-//                if (err) throw err;
-//                console.log(result);
-//              });
-//
-//            console.error("connect db");
-//        }
-//    })
-//} catch (error) {
-//  console.error("error db");
-//  console.error(error);
-  // expected output: ReferenceError: nonExistentFunction is not defined
-  // Note - error messages will vary depending on browser
-//}
+//  client.close();
+//});
+
+
+try {
+    MongoClient.connect(uri, {}, (error, client)=>{
+        
+        console.error("connect db");
+        if (error) { 
+            console.log("not ok "+error);
+        } else {
+            const db = client.db(dbname)
+    
+            query = {id:1}
+
+            res = db.collection("test1").find({}).toArray(function(err, result) {
+                if (err) throw err;
+                console.log(result);
+              });
+
+            console.error("connect db");
+        }
+    })
+} catch (error) {
+  console.error("error db");
+  console.error(error);
+   expected output: ReferenceError: nonExistentFunction is not defined
+   Note - error messages will vary depending on browser
+}

@@ -25,8 +25,9 @@ app.post('/login', (req, res) => {
     //check data with db
     console.log("hello req res test");
     console.log(req);
+    console.log("hello req res test");
     console.log(res);
-    res.render('pages/sterowanie_aplikacji_ejs')
+    res.render('pages/sterowanie_aplikacji')
 });
 
 //baza danych

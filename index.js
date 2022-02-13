@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+import EmployeesScheduler from './EmployeesScheduler.mjs';
+let EmpS = new EmployeesScheduler();
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,6 +22,7 @@ app.get('/czas_pracy_ejs', (req, res) => res.render('pages/czas_pracy'));
 app.get('/archiwum_grafikow_ejs', (req, res) => res.render('pages/archiwum_grafikow'));
 app.get('/absencje_ejs', (req, res) => res.render('pages/absencje'));
 app.get('/db_ejs', (req, res) => res.render('pages/db'));
+app.get('//wyloguj_ejs', (req, res) => res.render('pages/strona_logowanie'));
 //
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
@@ -26,7 +30,7 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 //loggin
 app.post('/login', (req, res) => {
-    //check data with db
+    //TODO: check data with db
     var user_name = req.body.user_name;
     var password = req.body.password;
     console.log("User name = "+user_name+", password is "+password);
@@ -35,6 +39,12 @@ app.post('/login', (req, res) => {
         res.render('pages/sterowanie_aplikacji')
     else
         res.render('pages/strona_logowanie')
+});
+
+
+//algorithm
+app.post('/generate', (req, res) => {
+    
 });
 
 //baza danych

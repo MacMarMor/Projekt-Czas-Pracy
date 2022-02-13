@@ -1,5 +1,3 @@
-module.exports = EmployeesScheduler;
-
 class EmployeesScheduler {
     
     EMPLOYEE = new Array;
@@ -99,3 +97,5 @@ class EmployeesScheduler {
         //send JSON_EmployeeShift to db
     }
 }
+
+module.exports = EmployeesScheduler;

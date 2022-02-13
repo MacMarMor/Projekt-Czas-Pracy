@@ -53,8 +53,8 @@ app.post('/generate', (req, res) => {
 const MongoClient = require('mongodb').MongoClient
 
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
-//const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net:5000/Test1"
-const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const url = "mongodb://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net:5000/Test1"
+//const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const dbname = "Test1";
 
 class Date

@@ -47,6 +47,7 @@ app.post('/login', (req, res) => {
 //algorithm
 app.post('/generate', (req, res) => {
     
+        console.log("Im work!! bLah");
 });
 
 //baza danych

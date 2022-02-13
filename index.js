@@ -98,7 +98,7 @@ class dniPracy {
 console.log("test log");
 a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
 
-var MongoClient = require('mongodb').MongoClient;
+//var MongoClient = require('mongodb').MongoClient;
 var uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 MongoClient.connect(uri, function(err, client) {
@@ -110,30 +110,30 @@ MongoClient.connect(uri, function(err, client) {
 });
 
 
-
-
-try {
-    MongoClient.connect(url, {}, (error, client)=>{
-        
-        console.error("connect db");
-        if (error) { 
-            console.log("not ok "+error);
-        } else {
-            const db = client.db(dbname)
-    
-            query = {id:1}
-
-            res = db.collection("test1").find({}).toArray(function(err, result) {
-                if (err) throw err;
-                console.log(result);
-              });
-
-            console.error("connect db");
-        }
-    })
-} catch (error) {
-  console.error("error db");
-  console.error(error);
-  // expected output: ReferenceError: nonExistentFunction is not defined
-  // Note - error messages will vary depending on browser
-}
+//
+//
+//try {
+//    MongoClient.connect(url, {}, (error, client)=>{
+//        
+//        console.error("connect db");
+//        if (error) { 
+//            console.log("not ok "+error);
+//        } else {
+//            const db = client.db(dbname)
+//    
+//            query = {id:1}
+//
+//            res = db.collection("test1").find({}).toArray(function(err, result) {
+//                if (err) throw err;
+//                console.log(result);
+//              });
+//
+//            console.error("connect db");
+//        }
+//    })
+//} catch (error) {
+//  console.error("error db");
+//  console.error(error);
+//  // expected output: ReferenceError: nonExistentFunction is not defined
+//  // Note - error messages will vary depending on browser
+//}

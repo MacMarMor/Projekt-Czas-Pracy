@@ -130,10 +130,10 @@ var uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27
 //}
 
 MongoClient.connect(uri, function(err, client) {
+            console.log("not ok "+err);
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
     
-            console.log("not ok "+err);
   client.close();
 });
 

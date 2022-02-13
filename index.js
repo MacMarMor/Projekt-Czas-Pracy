@@ -27,7 +27,7 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 //loggin
 app.post('/login', (req, res) => {
     //check data with db
-    var user_name = req.body.user;
+    var user_name = req.body.user_name;
     var password = req.body.password;
     console.log("User name = "+user_name+", password is "+password);
     

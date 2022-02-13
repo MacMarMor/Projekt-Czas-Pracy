@@ -6,7 +6,6 @@ class EmployeesScheduler {
     JSON_EmployeeShift;
 
     constructor () {
-        console.log("Im work!!");
     }
     
     setSchedule(startDate, endDate){

@@ -102,13 +102,13 @@ a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8
 //var MongoClient = require('mongodb').MongoClient;
 var uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
 //const url = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
-
+try{
 MongoClient.connect(uri, function(err, client) {
   //const collection = client.db("test").collection("devices");
   // perform actions on the collection object
     console.error("connect db");
-        if (error) { 
-            console.log("not ok "+error);
+        if (err) { 
+            console.log("not ok "+err);
         } else {
             const db = client.db(dbname)
     
@@ -124,6 +124,12 @@ MongoClient.connect(uri, function(err, client) {
 //        console.error("buka db");
 //  client.close();
 });
+} catch (error) {
+  console.error("error db");
+  console.error(error);
+   expected output: ReferenceError: nonExistentFunction is not defined
+   Note - error messages will vary depending on browser
+}
 
 
 

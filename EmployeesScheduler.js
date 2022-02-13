@@ -24,11 +24,13 @@ class EmployeesScheduler {
             while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){
                 //need 4h or 8h employee? -> shiftTime
                 var shiftTime;
-                for(j=0;j<7;j++)
+                for(j=0;j<7;j++){
                     if(this.getMinimumStaffAt(i+j) > 0)
                         shiftTime++;
-                if(shiftTime < 5) //4h shift
-                    while (true) {//get employee while employee shift != shiftTime
+                }
+                
+                if(shiftTime < 5) {//4h shift
+                        while (true) {//get employee while employee shift != shiftTime
                         if(this.EMPLOYEE[j].shiftDuration == 4){
                             //make JSON for employee shift
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
@@ -37,6 +39,7 @@ class EmployeesScheduler {
                         }
                         else
                             j++;
+                    }
                     }
                 else {// 8h shift
                     while (true) {//get employee while employee shift != shiftTime

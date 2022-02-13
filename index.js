@@ -98,6 +98,8 @@ a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8
 
 try {
     MongoClient.connect(url, {}, (error, client)=>{
+        
+    console.error("connect db");
     //    if (error) { console.log("not ok")}
     //console.log("almoost ok")
     //    const db = client.db(dbname)

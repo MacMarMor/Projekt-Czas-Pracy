@@ -76,7 +76,7 @@ a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8
 
 //MongoClient.connect(url, {}, (error, client)=>{
     
-console.log("test log");
+console.log("test log2");
 //    if (error) { console.log("not ok")}
 //console.log("almoost ok")
 //    const db = client.db(dbname)

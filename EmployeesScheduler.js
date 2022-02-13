@@ -30,7 +30,7 @@ class EmployeesScheduler {
                     if(this.getMinimumStaffAt(i+j) > 0)
                         shiftTime++;
                 if(shiftTime < 5) //4h shift
-                    while True {//get employee while employee shift != shiftTime
+                    while true {//get employee while employee shift != shiftTime
                         if(this.EMPLOYEE[j].shiftDuration == 4)
                             //make JSON for employee shift
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
@@ -40,7 +40,7 @@ class EmployeesScheduler {
                             j++;
                     }
                 else // 8h shift
-                    while True {//get employee while employee shift != shiftTime
+                    while true {//get employee while employee shift != shiftTime
                         if(this.EMPLOYEE[j].shiftDuration == 8)
                             //make JSON for employee shift
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);  //grafik.json

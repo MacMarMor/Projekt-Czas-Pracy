@@ -48,6 +48,7 @@ app.post('/login', (req, res) => {
 app.post('/generate', (req, res) => {
     
         console.log("Im work!! bLah");
+    res.render('pages/generuj_grafik');
 });
 
 //baza danych

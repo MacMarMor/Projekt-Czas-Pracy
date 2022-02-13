@@ -97,6 +97,20 @@ class dniPracy {
 console.log("test log");
 a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
 
+
+
+//const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+    console.error("buka db");
+  client.close();
+});
+
+
+
 try {
     MongoClient.connect(url, {}, (error, client)=>{
         

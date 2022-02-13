@@ -23,6 +23,9 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 //loggin
 app.post('/login', (req, res) => {
     //check data with db
+    console.log("req res test");
+    console.log(req);
+    console.log(res);
     res.render('pages/sterowanie_aplikacji_ejs')
 });
 
@@ -30,7 +33,7 @@ app.post('/login', (req, res) => {
 const MongoClient = require('mongodb').MongoClient
 
 const url = "mongodb+srv://SieciWWW:Sieci123@sieciwww.ydgvt.mongodb.net/test"
-const dbname = "Test1"
+const dbname = "Test1";
 
 class Date
 {
@@ -69,7 +72,7 @@ class dniPracy {
     }
 }
 
-console.log("test log")
+console.log("test log");
 a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
 
 //MongoClient.connect(url, {}, (error, client)=>{

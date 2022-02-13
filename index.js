@@ -3,6 +3,9 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use(express.static(path.join(__dirname, '/public/')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -23,11 +26,14 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 //loggin
 app.post('/login', (req, res) => {
     //check data with db
-    console.log("hello req res test");
-    console.log(req);
-    console.log("hello req res test");
-    console.log(res);
-    res.render('pages/sterowanie_aplikacji')
+    var user_name = req.body.user;
+    var password = req.body.password;
+    console.log("User name = "+user_name+", password is "+password);
+    
+    if(user_name == "Admin" && password == "Admin") 
+        res.render('pages/sterowanie_aplikacji')
+    else
+        res.render('pages/strona_logowanie')
 });
 
 //baza danych

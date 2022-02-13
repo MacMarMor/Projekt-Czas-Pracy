@@ -23,7 +23,7 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 //loggin
 app.post('/login', (req, res) => {
     //check data with db
-    console.log("req res test");
+    console.log("hello req res test");
     console.log(req);
     console.log(res);
     res.render('pages/sterowanie_aplikacji_ejs')

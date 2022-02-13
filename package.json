@@ -15,7 +15,7 @@
     "express": "^4.15.2",
     "mongodb": "4.4",
     "mongoose": "~4.4",
-    "sails-mongo": "lastest",
+    "sails-mongo": "1.1",
     "bson": "1.1.5"
   },
   "devDependencies": {

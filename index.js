@@ -4,10 +4,6 @@ const EmployeesScheduler = require('./EmployeesScheduler.js');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const app = express();
- 
-var EmpS = new EmployeesScheduler();
-//import EmployeesScheduler from './EmployeesScheduler.mjs';
-//let EmpS = new EmployeesScheduler();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -47,7 +43,9 @@ app.post('/login', (req, res) => {
 //algorithm
 app.post('/generate', (req, res) => {
     
-        console.log("Im work!! bLah");
+    var EmpS = new EmployeesScheduler();
+    
+    
     res.render('pages/generuj_grafik');
 });
 
@@ -98,16 +96,23 @@ class dniPracy {
 console.log("test log");
 a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
 
-//MongoClient.connect(url, {}, (error, client)=>{
-//    if (error) { console.log("not ok")}
-//console.log("almoost ok")
-//    const db = client.db(dbname)
-//
-//    query = {id:1}
-//
-//    res = db.collection("test1").find({}).toArray(function(err, result) {
-//        if (err) throw err;
-//        console.log(result);
-//      });
-//
-//})
+try {
+    MongoClient.connect(url, {}, (error, client)=>{
+    //    if (error) { console.log("not ok")}
+    //console.log("almoost ok")
+    //    const db = client.db(dbname)
+    //
+    //    query = {id:1}
+    //
+    //    res = db.collection("test1").find({}).toArray(function(err, result) {
+    //        if (err) throw err;
+    //        console.log(result);
+    //      });
+    //
+    })
+} catch (error) {
+  console.error("error db");
+  console.error(error);
+  // expected output: ReferenceError: nonExistentFunction is not defined
+  // Note - error messages will vary depending on browser
+}

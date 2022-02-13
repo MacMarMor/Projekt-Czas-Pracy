@@ -31,24 +31,27 @@ class EmployeesScheduler {
                         shiftTime++;
                 if(shiftTime < 5) //4h shift
                     while (true) {//get employee while employee shift != shiftTime
-                        if(this.EMPLOYEE[j].shiftDuration == 4)
+                        if(this.EMPLOYEE[j].shiftDuration == 4){
                             //make JSON for employee shift
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
                             //make JSON for MinimumStaff ('grafik')
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
+                        }
                         else
                             j++;
                     }
-                else // 8h shift
+                else {// 8h shift
                     while (true) {//get employee while employee shift != shiftTime
-                        if(this.EMPLOYEE[j].shiftDuration == 8)
+                        if(this.EMPLOYEE[j].shiftDuration == 8){
                             //make JSON for employee shift
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);  //grafik.json
                             //make JSON for MinimumStaff ('grafik')
                             this.prepreJSON_MinimumStaff(this.EMPLOYEE[j]);
+                        }
                         else
                             j++;
                     }
+                }
             }
         }
     }

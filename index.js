@@ -53,13 +53,19 @@ app.post('/generate', (req, res) => {
 //    promise.then(values => {
 //        console.log(values);
 //    });
-//	var promise = db.getEmployees();
-	
-	db.getEmployees().then(function(json) {
-		console.log("XAAAAAAAAAA " + json);
+	var promise = db.getEmployees();
+	promise.then(function(json) {
+        EmpS.updateEmployees(json);
+//		console.log("XAAAAAAAAAA " + json);
 	});
 	
-
+	
+	var promise2 = db.getSchedule();
+	promise2.then(function(json) {
+        EmpS.updateMinimumStaff(json);
+//		console.log("XAAAAAAAAAA " + json);
+	});
+	
     /*db.getEmployees().then(function (json) {
         EmpS.updateEmployees(json);
     });*/

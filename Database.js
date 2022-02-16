@@ -51,7 +51,10 @@ class Database
 
     getEmployees()
     {
-        const promise = new Promise(function (resolve, reject) {resolve (connect("test1"))});
+        const promise = new Promise(function (resolve, reject) {
+            var db = new Database();
+            resolve (db.connect("test1"))}
+                                   );
         console.log("YAAAAAAAAAA " + promise);
         promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
     // here you can use the result of promiseB

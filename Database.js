@@ -16,7 +16,7 @@ class Database
     static connect(collection)
     {
             try {
-                MongoClient.connect(this.uri, {}, (error, client)=>{
+                this.MongoClient.connect(this.uri, {}, (error, client)=>{
                     if (error) { 
                         console.log("not ok "+error);
                     } else {

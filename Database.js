@@ -21,18 +21,22 @@ class Database
                     console.log("not ok "+error);
                 } else {
                     const db = client.db(this.dbname);
-            
+                    
                     console.error("connect db1");
-                    db.collection(collection).find({}).toArray(function(err, result) 
-                    {
-                        console.error("collection err: "+err);
-                        if (err) throw err;
-                        
-                        console.error("connect db2");
-                        console.error("collection result: "+result);
-                        return result;
-                        //return result;
+                    return new Promise((resolve, reject) => {
+                        db.collection(collection).find({}).toArray(function(err, result) 
+                        {
+                            console.error("collection err: "+err);
+                            if (err) throw err;
+
+                            console.error("connect db2");
+                            console.error("collection result: "+result);
+                            return result;
+                            //return result;
+                        });
                     });
+                    
+                    
 
                     console.error("connect db3");
                 }

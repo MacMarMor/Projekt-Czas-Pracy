@@ -15,16 +15,17 @@ class Database
 
     connect(collection)
     {
-        try {
-            this.MongoClient.connect(this.uri, {}, (error, client)=>{
-                if (error) { 
-                    console.log("not ok "+error);
-                } else {
-                    const db = client.db(this.dbname);
-                    
-                    console.error("connect db1");
-                    
-                    return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
+            try {
+                this.MongoClient.connect(this.uri, {}, (error, client)=>{
+                    if (error) { 
+                        console.log("not ok "+error);
+                    } else {
+                        const db = client.db(this.dbname);
+
+                        console.error("connect db1");
+
+
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
                             console.error("collection err: "+err);
@@ -35,17 +36,18 @@ class Database
                             resolve(result);
                             //return result;
                         });
-                    });
-                    
-                    
 
-                    console.error("connect db3");
-                }
-            })
-        } catch (error) {
-          console.error("error db");
-          console.error(error);
-        }
+
+
+
+                        console.error("connect db3");
+                    }
+                })
+            } catch (error) {
+              console.error("error db");
+              console.error(error);
+            }
+        });
     }
 
 

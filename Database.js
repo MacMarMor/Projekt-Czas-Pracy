@@ -33,9 +33,9 @@ class Database
                             console.error("connect db2");
                             console.error("collection result: "+result);
                             resolve(result);
-                            //return result;
+                            return result;
                         });
-                    });
+                    //});
                     
                     
 
@@ -51,7 +51,8 @@ class Database
 
     getEmployees()
     {
-        return new Promise(function (resolve, reject) { resolve connect("test1");});
+        console.log("YAAAAAAAAAA " + this.connect("test1"))
+        return this.connect("test1");
     }
 
     getSchedule()

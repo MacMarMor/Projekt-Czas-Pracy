@@ -42,7 +42,7 @@ app.post('/login', (req, res) => {
 
 
 //algorithm
-app.get('/generate', (req, res) => {
+app.post('/generate', (req, res) => {
     
     var EmpS = new EmployeesScheduler();
     var db = new Database();
@@ -63,5 +63,5 @@ app.get('/generate', (req, res) => {
 	//TODO: Send data to client
 	
     res.render('pages/generuj_grafik');
-	setTimeout(res.send(j),2000);
+    res.send("j");
 });

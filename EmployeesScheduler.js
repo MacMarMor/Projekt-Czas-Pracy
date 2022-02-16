@@ -75,13 +75,13 @@ class EmployeesScheduler {
     
     updateEmployees(text){ // request db for employees list
         //lista_pracownikow.json
-        console.log(text)
+        console.log("testEMPS: "+text)
     }
     
     updateMinimumStaff(text){ // request db for employees list
         //grafik.json
         //JSON_EmployeeShift =
-        console.log(text)
+        console.log("testminStaff: "+text)
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value

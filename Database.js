@@ -30,6 +30,7 @@ class Database
                         if (err) throw err;
                         
                         console.error("collection result: "+result);
+                        return result;
                         resultret = result;
                         //return result;
                     });

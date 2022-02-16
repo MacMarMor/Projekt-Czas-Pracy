@@ -51,7 +51,10 @@ class Database
 
     getEmployees()
     {
-        console.log("YAAAAAAAAAA " + this.connect("test1"))
+        console.log("YAAAAAAAAAA " + this.connect("test1"));
+        this.connect("test1").then(function (json) {
+        console.log("BeEEEEEEE " + this.connect("test1"));
+    });
         return this.connect("test1");
     }
 

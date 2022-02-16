@@ -53,9 +53,10 @@ app.post('/generate', (req, res) => {
 //    promise.then(values => {
 //        console.log(values);
 //    });
-    db.getEmployees().then(function (json) {
+    console.log(db.getEmployees());
+    /*db.getEmployees().then(function (json) {
         EmpS.updateEmployees(json);
-    });
+    });*/
     //EmpS.updateMinimumStaff(db.getSchedule());
     //console.log()
     

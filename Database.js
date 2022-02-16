@@ -15,7 +15,7 @@ class Database
 
     connect(collection)
     {
-        resultret = null;
+        var resultret = null;
         try {
             this.MongoClient.connect(this.uri, {}, (error, client)=>{
                 if (error) { 

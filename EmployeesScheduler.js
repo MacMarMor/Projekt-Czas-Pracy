@@ -1,3 +1,5 @@
+const { defaultConfiguration } = require("express/lib/application");
+
 class EmployeesScheduler {
     
     EMPLOYEE = new Array;
@@ -71,13 +73,15 @@ class EmployeesScheduler {
         setSchedule(startDate,endDate)
     }
     
-    updateEmployees(){ // request db for employees list
+    updateEmployees(text){ // request db for employees list
         //lista_pracownikow.json
+        console.log(text)
     }
     
-    updateMinimumStaff(){ // request db for employees list
+    updateMinimumStaff(text){ // request db for employees list
         //grafik.json
         //JSON_EmployeeShift =
+        console.log(text)
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value
@@ -96,8 +100,8 @@ class EmployeesScheduler {
         
     }
 
-    updateDB(){ // request db for update list
-        //send JSON_EmployeeShift to db
+    updateDB(text){ // request db for update list
+       
     }
 }
 

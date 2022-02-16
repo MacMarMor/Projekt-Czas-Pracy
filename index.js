@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const EmployeesScheduler = require('./EmployeesScheduler.js');  
+const Database = require('./Database.js')
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -44,13 +45,24 @@ app.post('/login', (req, res) => {
 app.post('/generate', (req, res) => {
     
     var EmpS = new EmployeesScheduler();
-    
+    var db = new Database();
+
+    EmpS.updateEmployees(db.getEmployees());
+    EmpS.updateMinimumStaff(db.getSchedule());
+    //console.log()
     
     res.render('pages/generuj_grafik');
 });
 
+var EmpS = new EmployeesScheduler();
+var db = new Database();
+
+EmpS.updateEmployees(db.getEmployees());
+EmpS.updateMinimumStaff(db.getSchedule());
+
+
 //baza danych
-const MongoClient = require('mongodb').MongoClient
+/*const MongoClient = require('mongodb').MongoClient
 const dbname = "Test1";
 
 class Date
@@ -115,4 +127,4 @@ try {
 } catch (error) {
   console.error("error db");
   console.error(error);
-}
+}*/

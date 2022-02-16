@@ -59,15 +59,22 @@ class Database
 
 			promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
 		// here you can use the result of promiseB
-console.log("cyganeczka ");
+console.log("cygan ");
 			return promise;
-		}
+		});
     }
 
     getSchedule()
-    {
-        return this.connect("grafik");
-    }
+	{
+        return new Promise(function (resolve, reject) {
+		
+			const promise = Database.connect("grafik");
+
+			promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
+		// here you can use the result of promiseB
+
+			return promise;
+		});
 }
 
 module.exports = Database;

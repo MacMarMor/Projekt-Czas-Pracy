@@ -53,7 +53,9 @@ app.post('/generate', (req, res) => {
 //    promise.then(values => {
 //        console.log(values);
 //    });
-    console.log(db.getEmployees());
+	var promise = db.getEmployees();
+	promise.then(function(json) {console.log("XAAAAAAAAAA " + json);});
+    console.log("ZAAAAAAAAAA "+db.getEmployees());
     /*db.getEmployees().then(function (json) {
         EmpS.updateEmployees(json);
     });*/

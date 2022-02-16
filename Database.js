@@ -24,7 +24,7 @@ class Database
                     
                     console.error("connect db1");
                     
-                    return new Promise((resolve, reject) => {
+                    return new Promise(function (resolve, reject) {
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
                             console.error("collection err: "+err);

@@ -53,12 +53,15 @@ class Database
 
     getEmployees()
     {
-        const promise = Database.connect("test1");
+        return new Promise(function (resolve, reject) {
 		
-        promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
-    // here you can use the result of promiseB
+			const promise = Database.connect("test1");
 
-        return promise;
+			promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
+		// here you can use the result of promiseB
+console.log("cyganeczka ");
+			return promise;
+		}
     }
 
     getSchedule()

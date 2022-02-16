@@ -36,8 +36,8 @@ class Database
 
                             console.error("connect db2");
                             console.error("collection result: "+result);
-                            resolve(result);
-                            //return result;
+                            //resolve(result);
+                            return result;
                         });
 
 

@@ -53,8 +53,7 @@ class Database
 
     getEmployees()
     {
-        const promise = new Promise(function (resolve, reject) {
-            resolve (Database.connect("test1"))}
+        const promise = Database.connect("test1");
                                    );
         console.log("YAAAAAAAAAA " + promise);
         promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});

@@ -52,8 +52,7 @@ class Database
     getEmployees()
     {
         const promise = new Promise(function (resolve, reject) {resolve (this.connect("test1"))});
-        console.log("YAAAAAAAAAA " + promise);
-        return promise;
+        promise.then(value => { return console.log("YAAAAAAAAAA " + value); })
     }
 
     getSchedule()

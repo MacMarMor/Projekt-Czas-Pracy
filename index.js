@@ -52,13 +52,15 @@ app.post('/generate', (req, res) => {
         EmpS.updateEmployees(json);
 	});
 	
-	
+	var j;
 	var promise2 = db.getSchedule();
 	promise2.then(function(json) {
         EmpS.updateMinimumStaff(json);
+		j = json;
 	});
 	
 	
 	//TODO: Send data to client
-    res.render('pages/generuj_grafik');
+    res.send(j);
+//    res.render('pages/generuj_grafik');
 });

@@ -61,6 +61,7 @@ app.post('/generate', (req, res) => {
 	
 	
 	//TODO: Send data to client
+	
+    res.render('pages/generuj_grafik');
     res.send(j);
-//    res.render('pages/generuj_grafik');
 });

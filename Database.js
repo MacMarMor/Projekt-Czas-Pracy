@@ -53,10 +53,9 @@ class Database
 			const promise = Database.connect("test1");
 
 			promise.then(function(result) {
+				resolve(result);
 //				console.log("BAAAAAAAAAA " + result);
 			});
-
-			return promise;
 		});
     }
 
@@ -67,10 +66,9 @@ class Database
 			const promise = Database.connect("grafik");
 
 			promise.then(function(result) {
+				resolve(result);
 //				console.log("BAAAAAAAAAA " + result);
 			});
-
-			return promise;
 		});
 	}
 

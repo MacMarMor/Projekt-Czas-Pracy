@@ -54,12 +54,6 @@ app.post('/generate', (req, res) => {
     res.render('pages/generuj_grafik');
 });
 
-var EmpS = new EmployeesScheduler();
-var db = new Database();
-
-EmpS.updateEmployees(db.getEmployees());
-EmpS.updateMinimumStaff(db.getSchedule());
-
 
 //baza danych
 /*const MongoClient = require('mongodb').MongoClient

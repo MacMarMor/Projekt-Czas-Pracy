@@ -15,6 +15,7 @@ class Database
 
     connect(collection)
     {
+        resultret = null;
         try {
             this.MongoClient.connect(this.uri, {}, (error, client)=>{
                 if (error) { 
@@ -27,7 +28,8 @@ class Database
                     {
                         console.error("collection err: "+err);
                         if (err) throw err;
-                        return result;
+                        resultret = result;
+                        //return result;
                     });
 
                     console.error("connect db");
@@ -37,6 +39,7 @@ class Database
           console.error("error db");
           console.error(error);
         }
+        return resultret;
     }
 
 

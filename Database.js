@@ -25,6 +25,7 @@ class Database
         
                     db.collection(collection).find({}).toArray(function(err, result) 
                     {
+                        console.error("collection err: "+err);
                         if (err) throw err;
                         return result;
                     });

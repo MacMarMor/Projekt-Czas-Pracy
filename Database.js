@@ -15,10 +15,11 @@ class Database
 
     static connect(collection)
     {
-		const uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
-		const MongoClient = require('mongodb').MongoClient;
-		//MongoClient = require('mongodb/lib/mongo_client').MongoClient;
-		const dbname = "Test1";
+        return new Promise(function (resolve, reject) {
+			const uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
+			const MongoClient = require('mongodb').MongoClient;
+			//MongoClient = require('mongodb/lib/mongo_client').MongoClient;
+			const dbname = "Test1";
             try {
                 MongoClient.connect(uri, {}, (error, client)=>{
                     if (error) { 
@@ -36,13 +37,9 @@ class Database
 
                             console.error("connect db2");
                             console.error("collection result: "+result);
-                            //resolve(result);
-                            return result;
+                            resolve(result);
+//                            return result;
                         });
-
-
-
-
                         console.error("connect db3");
                     }
                 })
@@ -50,6 +47,7 @@ class Database
               console.error("error db");
               console.error(error);
             }
+		});
     }
 
 

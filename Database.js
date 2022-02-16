@@ -1,9 +1,9 @@
 class Database
 {
-    uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
-    MongoClient = require('mongodb').MongoClient;
+    uri;
+    MongoClient;
     //MongoClient = require('mongodb/lib/mongo_client').MongoClient;
-    dbname = "Test1";
+    dbname;
 
     constructor()
     {
@@ -15,8 +15,12 @@ class Database
 
     static connect(collection)
     {
+		const uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
+		const MongoClient = require('mongodb').MongoClient;
+		//MongoClient = require('mongodb/lib/mongo_client').MongoClient;
+		const dbname = "Test1";
             try {
-                this.MongoClient.connect(this.uri, {}, (error, client)=>{
+                MongoClient.connect(this.uri, {}, (error, client)=>{
                     if (error) { 
                         console.log("not ok "+error);
                     } else {

@@ -55,7 +55,7 @@ class Database
         console.log("YAAAAAAAAAA " + promise);
         promiseB.then(function(result) {console.log("BAAAAAAAAAA " + result);});
     // here you can use the result of promiseB
-});
+
         return promise;
     }
 

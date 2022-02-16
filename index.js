@@ -47,7 +47,9 @@ app.post('/generate', (req, res) => {
     var EmpS = new EmployeesScheduler();
     var db = new Database();
 
-    EmpS.updateEmployees(db.getEmployees());
+    db.getEmployees().then(function (json) {
+        EmpS.updateEmployees(json);
+    });
     EmpS.updateMinimumStaff(db.getSchedule());
     //console.log()
     

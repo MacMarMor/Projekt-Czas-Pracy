@@ -51,7 +51,7 @@ class Database
 
     getEmployees()
     {
-        return this.connect("test1");
+        return new Promise(function (resolve, reject) { resolve this.connect("test1");});
     }
 
     getSchedule()

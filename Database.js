@@ -36,7 +36,7 @@ class Database
                             return result;
                         });
                     });
-                    //as
+                    
                     
 
                     console.error("connect db3");
@@ -51,11 +51,9 @@ class Database
 
     getEmployees()
     {
-        console.log("YAAAAAAAAAA " + this.connect("test1"));
-        this.connect("test1").then(function (json) {
-        console.log("BeEEEEEEE " + this.connect("test1"));
-    });
-        return this.connect("test1");
+        const promise = new Promise(function (resolve, reject) {resolve (this.connect("test1"))});
+        console.log("YAAAAAAAAAA " + promise);
+        return promise;
     }
 
     getSchedule()

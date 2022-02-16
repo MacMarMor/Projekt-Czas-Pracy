@@ -23,6 +23,7 @@ class Database
                     const db = client.db(this.dbname);
                     
                     console.error("connect db1");
+                    
                     return new Promise((resolve, reject) => {
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
@@ -31,7 +32,7 @@ class Database
 
                             console.error("connect db2");
                             console.error("collection result: "+result);
-                            return result;
+                            resolve(result);
                             //return result;
                         });
                     });

@@ -20,11 +20,11 @@ class Database
 		//MongoClient = require('mongodb/lib/mongo_client').MongoClient;
 		const dbname = "Test1";
             try {
-                MongoClient.connect(this.uri, {}, (error, client)=>{
+                MongoClient.connect(uri, {}, (error, client)=>{
                     if (error) { 
                         console.log("not ok "+error);
                     } else {
-                        const db = client.db(this.dbname);
+                        const db = client.db(dbname);
 
                         console.error("connect db1");
 

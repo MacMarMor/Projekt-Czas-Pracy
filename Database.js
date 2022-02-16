@@ -33,7 +33,7 @@ class Database
                             console.error("connect db2");
                             console.error("collection result: "+result);
                             resolve(result);
-                            return result;
+                            //return result;
                         });
                     });
                     
@@ -53,7 +53,7 @@ class Database
     {
         const promise = new Promise(function (resolve, reject) {resolve (this.connect("test1"))});
         console.log("YAAAAAAAAAA " + promise);
-        promiseB.then(function(result) {console.log("BAAAAAAAAAA " + result);});
+        promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
     // here you can use the result of promiseB
 
         return promise;

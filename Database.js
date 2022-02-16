@@ -75,6 +75,8 @@ console.log("cygan ");
 
 			return promise;
 		});
+	}
+
 }
 
 module.exports = Database;

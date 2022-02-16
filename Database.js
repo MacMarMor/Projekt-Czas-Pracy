@@ -17,6 +17,7 @@ class Database
         console.error("connect db1");
         return new Promise(function (resolve, reject) {
             try {
+                this.MongoClient = require('mongodb').MongoClient;
                 this.MongoClient.connect(this.uri, {}, (error, client)=>{
                     if (error) { 
                         console.log("not ok "+error);

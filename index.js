@@ -47,6 +47,12 @@ app.post('/generate', (req, res) => {
     var EmpS = new EmployeesScheduler();
     var db = new Database();
 
+    var promise = new Promise((resolve, reject) => {
+            resolve(db.getEmployees());
+    });
+    promise.then(values => {
+        console.log(values);
+    });
     db.getEmployees().then(function (json) {
         EmpS.updateEmployees(json);
     });

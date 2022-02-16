@@ -13,55 +13,50 @@ class Database
         this.dbname = "Test1";
     }
 
-    connect(collection) {
-        console.error("connect db1");
-        return new Promise(function (resolve, reject) {
-            try {
-                this.MongoClient = require('mongodb').MongoClient;
-                this.MongoClient.connect(this.uri, {}, (error, client)=>{
-                    if (error) { 
-                        console.log("not ok "+error);
-                    } else {
-                        const db = client.db(this.dbname);
-
-
-                        console.error("connect db2");
-
+    connect(collection)
+    {
+        try {
+            this.MongoClient.connect(this.uri, {}, (error, client)=>{
+                if (error) { 
+                    console.log("not ok "+error);
+                } else {
+                    const db = client.db(this.dbname);
+                    
+                    console.error("connect db1");
+                    
+                    //return new Promise(function (resolve, reject) {
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
                             console.error("collection err: "+err);
                             if (err) throw err;
 
-                            console.error("connect db3");
+                            console.error("connect db2");
                             console.error("collection result: "+result);
-                            resolve(result);
-                            //return result;
+                            //resolve(result);
+                            return result;
                         });
+                    //});
+                    
+                    
 
-
-
-
-                        console.error("connect dbx");
-                    }
-                });
-            } catch (error) {
-              console.error("error db");
-              console.error(error);
-            }
-        });
-        
-                        console.error("connect db4");
+                    console.error("connect db3");
+                }
+            })
+        } catch (error) {
+          console.error("error db");
+          console.error(error);
+        }
     }
 
 
     getEmployees()
     {
-        this.connect("test1");
+        return this.connect("test1");
     }
 
     getSchedule()
     {
-        this.connect("grafik");
+        return this.connect("grafik");
     }
 }
 

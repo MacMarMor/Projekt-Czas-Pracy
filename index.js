@@ -42,7 +42,7 @@ app.post('/login', (req, res) => {
 
 
 //algorithm
-app.post('/generate', (req, res) => {
+app.get('/generate', (req, res) => {
     
     var EmpS = new EmployeesScheduler();
     var db = new Database();

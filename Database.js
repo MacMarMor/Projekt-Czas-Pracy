@@ -13,7 +13,7 @@ class Database
         this.dbname = "Test1";
     }
 
-    async connect(collection)
+    static connect(collection)
     {
             try {
                 MongoClient.connect(this.uri, {}, (error, client)=>{
@@ -52,8 +52,7 @@ class Database
     getEmployees()
     {
         const promise = new Promise(function (resolve, reject) {
-            var db = new Database();
-            resolve (db.connect("test1"))}
+            resolve (connect("test1"))}
                                    );
         console.log("YAAAAAAAAAA " + promise);
         promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});

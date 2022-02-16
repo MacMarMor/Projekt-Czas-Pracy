@@ -28,6 +28,8 @@ class Database
                     {
                         console.error("collection err: "+err);
                         if (err) throw err;
+                        
+                        console.error("collection result: "+result);
                         resultret = result;
                         //return result;
                     });

@@ -27,20 +27,15 @@ class Database
                     } else {
                         const db = client.db(dbname);
 
-                        console.error("connect db1");
 
 
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
-                            console.error("collection err: "+err);
                             if (err) throw err;
 
-                            console.error("connect db2");
-                            console.error("collection result: "+result);
                             resolve(result);
 //                            return result;
                         });
-                        console.error("connect db3");
                     }
                 })
             } catch (error) {
@@ -57,9 +52,10 @@ class Database
 		
 			const promise = Database.connect("test1");
 
-			promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
-		// here you can use the result of promiseB
-console.log("cygan ");
+			promise.then(function(result) {
+//				console.log("BAAAAAAAAAA " + result);
+			});
+
 			return promise;
 		});
     }
@@ -70,8 +66,9 @@ console.log("cygan ");
 		
 			const promise = Database.connect("grafik");
 
-			promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});
-		// here you can use the result of promiseB
+			promise.then(function(result) {
+//				console.log("BAAAAAAAAAA " + result);
+			});
 
 			return promise;
 		});

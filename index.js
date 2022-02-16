@@ -54,9 +54,11 @@ app.post('/generate', (req, res) => {
 //        console.log(values);
 //    });
 	var promise = db.getEmployees();
+	
+		console.log("AAAAAAAAAAA " + promise);
 	promise.then(function(json) {
         EmpS.updateEmployees(json);
-//		console.log("XAAAAAAAAAA " + json);
+		console.log("XAAAAAAAAAA " + json);
 	});
 	
 	
@@ -66,12 +68,8 @@ app.post('/generate', (req, res) => {
 //		console.log("XAAAAAAAAAA " + json);
 	});
 	
-    /*db.getEmployees().then(function (json) {
-        EmpS.updateEmployees(json);
-    });*/
-//    EmpS.updateMinimumStaff(db.getSchedule());
-    //console.log()
-    
+	
+	//TODO: Send data to client
     res.render('pages/generuj_grafik');
 });
 

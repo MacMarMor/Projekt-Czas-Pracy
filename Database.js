@@ -15,7 +15,6 @@ class Database
 
     connect(collection)
     {
-        var resultret = null;
         try {
             this.MongoClient.connect(this.uri, {}, (error, client)=>{
                 if (error) { 
@@ -23,27 +22,25 @@ class Database
                 } else {
                     const db = client.db(this.dbname);
             
-        
+                    console.error("connect db1");
                     db.collection(collection).find({}).toArray(function(err, result) 
                     {
                         console.error("collection err: "+err);
                         if (err) throw err;
                         
+                        console.error("connect db2");
                         console.error("collection result: "+result);
                         return result;
-                        resultret = result;
                         //return result;
                     });
 
-                    console.error("connect db");
+                    console.error("connect db3");
                 }
             })
         } catch (error) {
           console.error("error db");
           console.error(error);
         }
-                    console.log("collection resultret: "+resultret);
-        return resultret;
     }
 
 

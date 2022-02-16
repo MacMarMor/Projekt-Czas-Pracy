@@ -41,6 +41,7 @@ class Database
           console.error("error db");
           console.error(error);
         }
+                    console.log("collection result: "+resultret);
         return resultret;
     }
 

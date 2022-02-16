@@ -47,98 +47,18 @@ app.post('/generate', (req, res) => {
     var EmpS = new EmployeesScheduler();
     var db = new Database();
 
-//    var promise = new Promise((resolve, reject) => {
-//            resolve(db.getEmployees());
-//    });
-//    promise.then(values => {
-//        console.log(values);
-//    });
 	var promise = db.getEmployees();
-	
-		console.log("AAAAAAAAAAA " + promise);
-	
 	promise.then(function(json) {
         EmpS.updateEmployees(json);
-		console.log("XAAAAAAAAAA " + json);
 	});
 	
 	
 	var promise2 = db.getSchedule();
 	promise2.then(function(json) {
         EmpS.updateMinimumStaff(json);
-//		console.log("XAAAAAAAAAA " + json);
 	});
 	
 	
 	//TODO: Send data to client
     res.render('pages/generuj_grafik');
 });
-
-
-//baza danych
-/*const MongoClient = require('mongodb').MongoClient
-const dbname = "Test1";
-
-class Date
-{
-    constructor(year, month, day)
-    {
-        this.year = year;
-        this.month = month;
-        this.day = day;
-    }
-}
-
-class Time
-{
-    constructor(hour, minute, second, nano)
-    {
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
-        this.nano = nano;
-    }
-}
-
-class startPracy {
-    constructor(Date, Time) {
-        this.date = Date;
-        this.godzina = Time;
-    }
-
-}
-
-class dniPracy {
-    constructor(Date, Time, iloscPrzepracowanychGodzin)
-    {
-        this.startPracy = new startPracy(Date, Time);
-        this.iloscPrzepracowanychGodzin = iloscPrzepracowanychGodzin;
-    }
-}
-
-
-a = new dniPracy(new startPracy(new Date(2021, 10, 10), new Time(1, 0, 0, 0)), 8);
-
-var uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
-
-try {
-    MongoClient.connect(uri, {}, (error, client)=>{
-        if (error) { 
-            console.log("not ok "+error);
-        } else {
-            const db = client.db(dbname)
-    
-            query = {id:1}
-
-            res = db.collection("test1").find({}).toArray(function(err, result) {
-                if (err) throw err;
-                console.log(result);
-              });
-
-            console.error("connect db");
-        }
-    })
-} catch (error) {
-  console.error("error db");
-  console.error(error);
-}*/

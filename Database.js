@@ -2,7 +2,6 @@ class Database
 {
     uri;
     MongoClient;
-    //MongoClient = require('mongodb/lib/mongo_client').MongoClient;
     dbname;
 
     constructor()
@@ -67,7 +66,6 @@ class Database
 
 			promise.then(function(result) {
 				resolve(result);
-//				console.log("BAAAAAAAAAA " + result);
 			});
 		});
 	}

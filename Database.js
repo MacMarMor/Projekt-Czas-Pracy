@@ -24,7 +24,7 @@ class Database
                     
                     console.error("connect db1");
                     
-                    //return new Promise(function (resolve, reject) {
+                    return new Promise(function (resolve, reject) {
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
                             console.error("collection err: "+err);
@@ -32,10 +32,10 @@ class Database
 
                             console.error("connect db2");
                             console.error("collection result: "+result);
-                            //resolve(result);
-                            return result;
+                            resolve(result);
+                            //return result;
                         });
-                    //});
+                    });
                     
                     
 

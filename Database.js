@@ -13,39 +13,43 @@ class Database
         this.dbname = "Test1";
     }
 
-    connect(collection)
-    {
-        try {
-            this.MongoClient.connect(this.uri, {}, (error, client)=>{
-                if (error) { 
-                    console.log("not ok "+error);
-                } else {
-                    const db = client.db(this.dbname);
-                    
-                    console.error("connect db1");
-                    
-                    return new Promise(function (resolve, reject) {
+    connect(collection) {
+        console.error("connect db1");
+        return new Promise(function (resolve, reject) {
+            try {
+                this.MongoClient.connect(this.uri, {}, (error, client)=>{
+                    if (error) { 
+                        console.log("not ok "+error);
+                    } else {
+                        const db = client.db(this.dbname);
+
+
+                        console.error("connect db2");
+
                         db.collection(collection).find({}).toArray(function(err, result) 
                         {
                             console.error("collection err: "+err);
                             if (err) throw err;
 
-                            console.error("connect db2");
+                            console.error("connect db3");
                             console.error("collection result: "+result);
                             resolve(result);
                             //return result;
                         });
-                    });
-                    
-                    
 
-                    console.error("connect db3");
-                }
-            })
-        } catch (error) {
-          console.error("error db");
-          console.error(error);
-        }
+
+
+
+                        console.error("connect dbx");
+                    }
+                });
+            } catch (error) {
+              console.error("error db");
+              console.error(error);
+            }
+        });
+        
+                        console.error("connect db4");
     }
 
 

@@ -50,7 +50,7 @@ app.post('/generate', (req, res) => {
     db.getEmployees().then(function (json) {
         EmpS.updateEmployees(json);
     });
-    EmpS.updateMinimumStaff(db.getSchedule());
+    //EmpS.updateMinimumStaff(db.getSchedule());
     //console.log()
     
     res.render('pages/generuj_grafik');

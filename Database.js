@@ -1,9 +1,9 @@
 class Database
 {
-    uri;
-    MongoClient;
+    uri = "mongodb://SieciWWW:Sieci123@sieciwww-shard-00-00.ydgvt.mongodb.net:27017,sieciwww-shard-00-01.ydgvt.mongodb.net:27017,sieciwww-shard-00-02.ydgvt.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-t0v948-shard-0&authSource=admin&retryWrites=true&w=majority";
+    MongoClient = require('mongodb').MongoClient;
     //MongoClient = require('mongodb/lib/mongo_client').MongoClient;
-    dbname;
+    dbname = "Test1";
 
     constructor()
     {
@@ -52,7 +52,7 @@ class Database
     getEmployees()
     {
         const promise = new Promise(function (resolve, reject) {
-            resolve (connect("test1"))}
+            resolve (Database.connect("test1"))}
                                    );
         console.log("YAAAAAAAAAA " + promise);
         promise.then(function(result) {console.log("BAAAAAAAAAA " + result);});

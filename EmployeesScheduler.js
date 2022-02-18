@@ -11,13 +11,15 @@ class EmployeesScheduler {
         console.log("Im work!! bLah");
     }
     
-    setSchedule(startDate, endDate){
+    setSchedule(){ //startDate, endDate){
         if (this.EMPLOYEE.count() == 0) { //check Employees data is correct
-            this.updateEmployees();
+//            this.updateEmployees();
+			throw new Error('EMPLOYEE is empty!');
         }
-        
+        console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
         if (this.MINIMUMSTAFF.count() == 0) { //check MinimumStaff data is correct
-            this.updateMinimumStaff(startDate, endDate);
+//            this.updateMinimumStaff(startDate, endDate);
+			throw new Error('MINIMUMSTAFF is empty!');
         }
         //check parameters startDate endDate is correct
         
@@ -63,29 +65,35 @@ class EmployeesScheduler {
         //get current year
         //startDate = year,month,01,00:00
         //endDate = year,month+1,1,00:00
-        setSchedule(startDate,endDate)
+        this.setSchedule(startDate,endDate)
     }
 
     setDay(day, month='optional'){
         //get current year, month
         //startDate = year,month,day,00:00
         //endDate = year,month,day+1,00:00
-        setSchedule(startDate,endDate)
+        this.setSchedule(startDate,endDate)
     }
     
-    updateEmployees(text){ // request db for employees list
+    updateEmployees(json){ // request db for employees list
         //lista_pracownikow.json
-        console.log("testEMPS: "+text)
+		
+		console.log("testEMPS json.stringify: "+JSON.stringify(json, null, 4));
+//		console.log("json.id: "+json[0]._id);
+		
+		this.EMPLOYEE = json;
     }
     
-    updateMinimumStaff(text){ // request db for employees list
+    updateMinimumStaff(json){ // request db for employees list
         //grafik.json
+		
         //JSON_EmployeeShift =
-        console.log("testminStaff: "+text)
+		this.MINIMUMSTAFF = json;
+        console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value
-        return MINIMUMSTAFF[time];
+        return this.MINIMUMSTAFF[time];
     }
     
     getStaffWorkedAt(time){ // from MINIMUMSTAFF get value

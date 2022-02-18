@@ -50,15 +50,6 @@ app.post('/generate', (req, res) => {
 	var promise = db.getEmployees();
 	promise.then(function(json) {
         EmpS.updateEmployees(json);
-		
-		console.log("WOLOLOLOLOLOLOLO");
-		
-		console.log("json: "+json);
-		console.log("json.stringify: "+JSON.stringify(json, null, 4));
-		console.log("json.id: "+Object.keys(req)[0]._id);
-		console.log("json.id: "+json[0]._id);
-		
-		console.log("WOLOLOLOLOLOLOLO");
 	});
 
 	var promise2 = db.getSchedule();
@@ -66,6 +57,7 @@ app.post('/generate', (req, res) => {
         EmpS.updateMinimumStaff(json);
 	});
 	
+	setSchedule();
 	
 	//TODO: Send data to client
     //res.send();

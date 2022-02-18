@@ -54,8 +54,9 @@ app.post('/generate', (req, res) => {
 		console.log("WOLOLOLOLOLOLOLO");
 		
 		console.log("json: "+json);
-		console.log("json.id: "+json.id);
 		console.log("json.stringify: "+JSON.stringify(json, null, 4));
+		console.log("json.id: "+Object.keys(req)[0]._id);
+		console.log("json.id: "+json[0]._id);
 		
 		console.log("WOLOLOLOLOLOLOLO");
 	});

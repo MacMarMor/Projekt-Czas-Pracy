@@ -85,6 +85,7 @@ class EmployeesScheduler {
 		//console.log("testEMPS json.stringify: "+JSON.stringify(json, null, 4));
 		//console.log("json.id: "+json[0]._id);
 
+        console.log(typeof(json))
         obj = JSON.parse(json);
         console.log(obj);
 		

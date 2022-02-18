@@ -50,17 +50,23 @@ app.post('/generate', (req, res) => {
 	var promise = db.getEmployees();
 	promise.then(function(json) {
         EmpS.updateEmployees(json);
+		
+		console.log("WOLOLOLOLOLOLOLO");
+		
+		console.log("json: "+json);
+		console.log("json.stringify: "+JSON.stringify(object, null, 4));
+		console.log("json.id: "+json.id);
+		
+		console.log("WOLOLOLOLOLOLOLO");
 	});
-	
-	var j;
+
 	var promise2 = db.getSchedule();
 	promise2.then(function(json) {
         EmpS.updateMinimumStaff(json);
-		j = json;
 	});
 	
 	
 	//TODO: Send data to client
-    res.send(j);
+    res.send();
     res.render('pages/generuj_grafik');
 });

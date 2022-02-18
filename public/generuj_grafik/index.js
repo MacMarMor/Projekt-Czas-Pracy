@@ -1,4 +1,4 @@
-alert("start");
+//alert("start");
 console.log("start");
 /*$(".button_sterowanie_aplikacji2").bind('ajax:success', function(result) {
     alert(result);

@@ -4,6 +4,7 @@ class EmployeesScheduler {
     
     EMPLOYEE = new Array;
     MINIMUMSTAFF = new Array;
+    //newarray = new Array;
 
     JSON_EmployeeShift;
 
@@ -24,17 +25,19 @@ class EmployeesScheduler {
         //check parameters startDate endDate is correct
         
         //while MinimumStaff > staffWorked at time
-        for(var i = 0; this.MINIMUMSTAFF.count() > i; i++){
-            while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){
+        for(var i = 0; this.MINIMUMSTAFF.count() > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
+            while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
                 //need 4h or 8h employee? -> shiftTime
                 var shiftTime;
-                for(j=0;j<7;j++){
-                    if(this.getMinimumStaffAt(i+j) > 0)
+                for(j=0;j<7;j++){ //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
+                    if(this.getMinimumStaffAt(i+j) > 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
+						//czyli sprawdzamy czy jest jeszcze zapotrzebowanie
                         shiftTime++;
                 }
-                
+				
                 if(shiftTime < 5) {//4h shift
-                        while (true) {//get employee while employee shift != shiftTime
+					var j = 0;
+					while (true) {//get employee while employee shift != shiftTime TODO: zmienić pętle
                         if(this.EMPLOYEE[j].shiftDuration == 4){
                             //make JSON for employee shift
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
@@ -46,6 +49,7 @@ class EmployeesScheduler {
                     }
                     }
                 else {// 8h shift
+					var j = 0;
                     while (true) {//get employee while employee shift != shiftTime
                         if(this.EMPLOYEE[j].shiftDuration == 8){
                             //make JSON for employee shift
@@ -88,7 +92,7 @@ class EmployeesScheduler {
         //grafik.json
 		
         //JSON_EmployeeShift =
-		this.MINIMUMSTAFF = json[0].grafik;
+		this.MINIMUMSTAFF = json[0].grafik; // musi zwrócić tablice 24-elementową z dnia aktualnego
         console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
     }
     
@@ -97,15 +101,21 @@ class EmployeesScheduler {
     }
     
     getStaffWorkedAt(time){ // from MINIMUMSTAFF get value
-        //
+        // [0 0 0 0 0 0 0 0]
     }
 
     prepreJSON_EmployeeShift(employee){
          //grafik.json
+		
+		//zapisać do nowej tablicy this.Employee_Scheduled
     }
 
     prepreJSON_MinimumStaff(employee){
         
+    }
+
+    getEmployee_Scheduled(employee){
+        //return Employee_Scheduled
     }
 
     updateDB(text){ // request db for update list

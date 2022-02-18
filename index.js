@@ -21,7 +21,7 @@ app.get('/czas_pracy_ejs', (req, res) => res.render('pages/czas_pracy'));
 app.get('/archiwum_grafikow_ejs', (req, res) => res.render('pages/archiwum_grafikow'));
 app.get('/absencje_ejs', (req, res) => res.render('pages/absencje'));
 app.get('/db_ejs', (req, res) => res.render('pages/db'));
-app.get('//wyloguj_ejs', (req, res) => res.render('pages/strona_logowanie'));
+app.get('/wyloguj_ejs', (req, res) => res.render('pages/strona_logowanie'));
 //
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
@@ -57,7 +57,8 @@ app.post('/generate', (req, res) => {
         EmpS.updateMinimumStaff(json);
 	});
 	
-//	setSchedule();
+//	EmpS.setSchedule();
+//	var dfghf = EmpS.getEmployee_Scheduled();
 	
 	//TODO: Send data to client
     //res.send();

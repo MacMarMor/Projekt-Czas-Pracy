@@ -54,8 +54,8 @@ app.post('/generate', (req, res) => {
 		console.log("WOLOLOLOLOLOLOLO");
 		
 		console.log("json: "+json);
-		console.log("json.stringify: "+JSON.stringify(object, null, 4));
 		console.log("json.id: "+json.id);
+		console.log("json.stringify: "+JSON.stringify(json, null, 4));
 		
 		console.log("WOLOLOLOLOLOLOLO");
 	});
@@ -67,6 +67,6 @@ app.post('/generate', (req, res) => {
 	
 	
 	//TODO: Send data to client
-    res.send();
+    //res.send();
     res.render('pages/generuj_grafik');
 });

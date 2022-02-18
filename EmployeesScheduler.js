@@ -82,8 +82,11 @@ class EmployeesScheduler {
     updateEmployees(json){ // request db for employees list
         //lista_pracownikow.json
 		
-		console.log("testEMPS json.stringify: "+JSON.stringify(json, null, 4));
-//		console.log("json.id: "+json[0]._id);
+		//console.log("testEMPS json.stringify: "+JSON.stringify(json, null, 4));
+		//console.log("json.id: "+json[0]._id);
+
+        obj = JSON.parse(json);
+        console.log(obj);
 		
 		this.EMPLOYEE = json;
     }

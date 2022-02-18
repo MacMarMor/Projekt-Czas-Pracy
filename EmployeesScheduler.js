@@ -88,7 +88,7 @@ class EmployeesScheduler {
         //grafik.json
 		
         //JSON_EmployeeShift =
-		this.MINIMUMSTAFF = json;
+		this.MINIMUMSTAFF = json[0].grafik;
         console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
     }
     

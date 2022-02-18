@@ -57,7 +57,7 @@ app.post('/generate', (req, res) => {
         EmpS.updateMinimumStaff(json);
 	});
 	
-	setSchedule();
+//	setSchedule();
 	
 	//TODO: Send data to client
     //res.send();

@@ -3,6 +3,7 @@ const path = require('path');
 const EmployeesScheduler = require('./EmployeesScheduler.js');  
 const Database = require('./Database.js')
 const bodyParser = require('body-parser');
+const { Router } = require('express');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -78,6 +79,19 @@ app.post('/generate', (req, res) => {
     //console.log(dfghf)
 	
 	//TODO: Send data to client
-    //res.send();
+    const express = require('express');
+    const ap = express();
+
+    var data = {
+        test: "tekst"
+    }
+
+    app.get('/', (req, res)=>{
+        res.json(data);
+    })
+    
+    res.send();
+
+
     res.render('pages/generuj_grafik');
 });

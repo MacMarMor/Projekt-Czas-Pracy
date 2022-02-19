@@ -130,7 +130,7 @@ class EmployeesScheduler {
     
     getStaffWorkedAt(time){ // from MINIMUMSTAFF get value
         // [0 0 0 0 0 0 0 0]
-        return this.MINIMUMSTAFF[time].pracownicy.length;
+        return 0;
     }
 
     prepreJSON_EmployeeShift(employee){

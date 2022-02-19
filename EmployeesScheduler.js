@@ -19,9 +19,9 @@ class EmployeesScheduler {
         }
         else
         {
-            console.log(this.EMPLOYEE)
+            console.log("ilosc = "+this.EMPLOYEE)
         }
-        console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
+        //console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
         /* (this.MINIMUMSTAFF.count() == 0) { //check MinimumStaff data is correct
 //            this.updateMinimumStaff(startDate, endDate);
 			throw new Error('MINIMUMSTAFF is empty!');

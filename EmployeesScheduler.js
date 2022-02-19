@@ -13,7 +13,7 @@ class EmployeesScheduler {
     }
     
     setSchedule(){ //startDate, endDate){
-        console.log("I'm in setSchedule")
+        console.log("I'm in setSchedule: "+ this.EMPLOYEE.length)
         if (this.EMPLOYEE.length == 0) { //check Employees data is correct
 //            this.updateEmployees();
 			throw new Error('EMPLOYEE is empty!');
@@ -95,9 +95,6 @@ class EmployeesScheduler {
 
         //new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
         //var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
-
-
-
         //console.log("obj = "+date);
 		//console.log(Array.from(obj).length)
 		this.EMPLOYEE = Array.from(obj.length);

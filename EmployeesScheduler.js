@@ -113,7 +113,7 @@ class EmployeesScheduler {
 
         console.log("upadte mininum staff = "+obj[0].grafik["2022-01-15"]);
 
-        this.MINIMUMSTAFF = obj[0].grafik["2022-01-15"];
+        this.MINIMUMSTAFF = obj[0].grafik["2022-01-15"]["dane"];
         console.log(this.MINIMUMSTAFF);
 
         

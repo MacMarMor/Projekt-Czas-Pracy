@@ -19,7 +19,7 @@ class EmployeesScheduler {
         }
         else
         {
-            console.log("ilosc = "+this.EMPLOYEE)
+            console.log("ilosc = "+this.EMPLOYEE.length)
         }
         //console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
         /* (this.MINIMUMSTAFF.count() == 0) { //check MinimumStaff data is correct

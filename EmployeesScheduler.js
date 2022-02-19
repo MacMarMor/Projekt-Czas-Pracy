@@ -114,8 +114,8 @@ class EmployeesScheduler {
         console.log("upadte mininum staff = "+obj[0].grafik["2022-01-15"]);
 
         this.MINIMUMSTAFF = obj[0].grafik["2022-01-15"];
+        console.log(this.MINIMUMSTAFF);
 
-        
         
 		//this.MINIMUMSTAFF = JSON.parse(JSON.stringify(json))[0]; // musi zwrócić tablice 24-elementową z dnia aktualnego
         //console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))

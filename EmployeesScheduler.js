@@ -30,17 +30,17 @@ class EmployeesScheduler {
 
         //check parameters startDate endDate is correct
 
-        for (var i = 0; i<this.MINIMUMSTAFF.length; i++)
+        /*for (var i = 0; i<this.MINIMUMSTAFF.length; i++)
         {
             console.log("JESTEM W PETLI")
             console.log("minimum staff = "+this.getMinimumStaffAt(i));
             this.getStaffWorkedAt(i);
-        }
+        }*/
 
         
         //while MinimumStaff > staffWorked at time
-        /*for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
-            /*while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
+        for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
+            while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
                 console.log(this.getMinimumStaffAt(i)+" "+this.getStaffWorkedAt(i));
                 //need 4h or 8h employee? -> shiftTime
                 /*var shiftTime;
@@ -75,9 +75,9 @@ class EmployeesScheduler {
                         else
                             j++;
                     }
-                }
+                }*/
             }
-        }*/
+        }
     }
 
     setMonth(month){

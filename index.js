@@ -4,6 +4,7 @@ const EmployeesScheduler = require('./EmployeesScheduler.js');
 const Database = require('./Database.js')
 const bodyParser = require('body-parser');
 const { Router } = require('express');
+const { toNamespacedPath } = require('path');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -89,7 +90,10 @@ app.post('/generate', (req, res) => {
     app.get('/', (req, res)=>{
         res.json(data);
     })
-    
+
+    app.listen(4000, ()=>{
+        console.log("raport generate");
+    });    
     res.send();
 
 

@@ -13,19 +13,23 @@ class EmployeesScheduler {
     }
     
     setSchedule(){ //startDate, endDate){
-        if (this.EMPLOYEE.count() == 0) { //check Employees data is correct
+        if (this.EMPLOYEE.length == 0) { //check Employees data is correct
 //            this.updateEmployees();
 			throw new Error('EMPLOYEE is empty!');
         }
+        else
+        {
+            console.log(this.EMPLOYEE)
+        }
         console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
-        if (this.MINIMUMSTAFF.count() == 0) { //check MinimumStaff data is correct
+        /* (this.MINIMUMSTAFF.count() == 0) { //check MinimumStaff data is correct
 //            this.updateMinimumStaff(startDate, endDate);
 			throw new Error('MINIMUMSTAFF is empty!');
-        }
+        }*/
         //check parameters startDate endDate is correct
         
         //while MinimumStaff > staffWorked at time
-        for(var i = 0; this.MINIMUMSTAFF.count() > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
+        /*for(var i = 0; this.MINIMUMSTAFF.count() > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
             while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
                 //need 4h or 8h employee? -> shiftTime
                 var shiftTime;
@@ -62,7 +66,7 @@ class EmployeesScheduler {
                     }
                 }
             }
-        }
+        }*/
     }
 
     setMonth(month){
@@ -92,9 +96,10 @@ class EmployeesScheduler {
         //var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
 
 
+
         //console.log("obj = "+date);
-		console.log(Array.from(obj).length)
-		this.EMPLOYEE = json;
+		//console.log(Array.from(obj).length)
+		this.EMPLOYEE = Array.from(obj.length);
     }
     
     updateMinimumStaff(json){ // request db for employees list

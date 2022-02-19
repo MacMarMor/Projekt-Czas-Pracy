@@ -57,9 +57,10 @@ app.post('/generate', (req, res) => {
     promise2.then(function(json) {
         EmpS.updateMinimumStaff(json);
         //EmpS.setSchedule();
+        EmpS.setSchedule();
     });
 
-    EmpS.setSchedule();
+    //EmpS.setSchedule();
 
     //EmpS.setSchedule();
 

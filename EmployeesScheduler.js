@@ -30,6 +30,7 @@ class EmployeesScheduler {
 
         for (var i = 0; i<this.MINIMUMSTAFF.length; i++)
         {
+            console.log("JESTEM W PETLI")
             console.log("minimum staff = "+this.getMinimumStaffAt(i));
             this.getStaffWorkedAt(i);
         }

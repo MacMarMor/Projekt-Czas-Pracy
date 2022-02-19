@@ -51,13 +51,13 @@ app.post('/generate', (req, res) => {
 	promise.then(function(json) {
         EmpS.updateEmployees(json);
         });
+          
+	});
 
     var promise2 = db.getSchedule();
     promise2.then(function(json) {
         EmpS.updateMinimumStaff(json);
-        EmpS.setSchedule();
-          
-	});
+        //EmpS.setSchedule();
 
     EmpS.setSchedule();
 

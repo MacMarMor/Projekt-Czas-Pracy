@@ -89,11 +89,11 @@ class EmployeesScheduler {
         var obj = JSON.parse(JSON.stringify(json));
 
         //new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
-        var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
+        //var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
 
 
-        console.log("obj = "+date);
-		
+        //console.log("obj = "+date);
+		console.log(obj.count())
 		this.EMPLOYEE = json;
     }
     
@@ -103,6 +103,8 @@ class EmployeesScheduler {
         //JSON_EmployeeShift =
 		this.MINIMUMSTAFF = json[0].grafik; // musi zwrócić tablice 24-elementową z dnia aktualnego
         console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
+
+        this.MINIMUMSTAFF = json;
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value

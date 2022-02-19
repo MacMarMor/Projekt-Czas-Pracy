@@ -25,15 +25,19 @@ class EmployeesScheduler {
 //            this.updateMinimumStaff(startDate, endDate);
 			throw new Error('MINIMUMSTAFF is empty!');
         }
-        else
-        {
-            console.log("setSchedule = "+this.MINIMUMSTAFF);
-        }
+
         //check parameters startDate endDate is correct
+
+        for (var i = 0; i<this.MINIMUMSTAFF.length; i++)
+        {
+            console.log("minimum staff = "+this.getMinimumStaffAt(i));
+            console.log("worked = "+this.getStaffWorkedAt(i));
+        }
+
         
         //while MinimumStaff > staffWorked at time
         for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
-            while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
+            /*while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
                 console.log(this.getMinimumStaffAt(i)+" "+this.getStaffWorkedAt(i));
                 //need 4h or 8h employee? -> shiftTime
                 /*var shiftTime;
@@ -68,8 +72,8 @@ class EmployeesScheduler {
                         else
                             j++;
                     }
-                }*/
-            }
+                }
+            }*/
         }
     }
 

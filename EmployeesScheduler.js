@@ -4,7 +4,7 @@ class EmployeesScheduler {
     
     EMPLOYEE = new Array;
     MINIMUMSTAFF = new Array;
-    //newarray = new Array;
+    SCHEDULE = new Array;
 
     JSON_EmployeeShift;
 
@@ -85,9 +85,9 @@ class EmployeesScheduler {
 		//console.log("testEMPS json.stringify: "+JSON.stringify(json, null, 4));
 		//console.log("json.id: "+json[0]._id);
 
-        console.log(typeof(json))
-        obj = JSON.parse(json);
-        console.log(obj);
+        //console.log(typeof(json))
+        obj = JSON.parse.stringify(json);
+        console.log(obj[0]);
 		
 		this.EMPLOYEE = json;
     }

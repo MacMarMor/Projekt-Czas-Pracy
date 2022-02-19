@@ -98,7 +98,7 @@ class EmployeesScheduler {
         //console.log("obj = "+date);
 		//console.log(Array.from(obj))
     
-		this.EMPLOYEE = Array.from(obj.length);
+		this.EMPLOYEE = Array.from(obj);
         console.log(this.EMPLOYEE)
     }
     

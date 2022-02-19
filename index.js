@@ -80,7 +80,7 @@ app.post('/generate', (req, res) => {
     //console.log(dfghf)
 	
 	//TODO: Send data to client
-    function sendToCLint(s){
+    /*function sendToCLint(s){
     const express = require('express');
     const ap = express();
 
@@ -98,5 +98,5 @@ app.post('/generate', (req, res) => {
     res.send();
 
 
-    res.render('pages/generuj_grafik');
+    res.render('pages/generuj_grafik');*/
 });

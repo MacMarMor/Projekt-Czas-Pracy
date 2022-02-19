@@ -60,8 +60,6 @@ app.post('/generate', (req, res) => {
 
     EmpS.setSchedule();
 
-   
-
     //EmpS.setSchedule();
 
 	/*var promise2 = db.getSchedule();

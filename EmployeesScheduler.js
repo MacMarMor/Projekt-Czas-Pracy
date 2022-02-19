@@ -16,14 +16,16 @@ class EmployeesScheduler {
         console.log("I'm in setSchedule: "+ this.EMPLOYEE)
         if (this.EMPLOYEE.length == 0) { //check Employees data is correct
 //            this.updateEmployees();
-			throw new Error('EMPLOYEE is empty!');
+			//throw new Error('EMPLOYEE is empty!');
+            console.log("Employee is empty");
         }
 
         //console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
         if (this.MINIMUMSTAFF.length == 0) { 
             //check MinimumStaff data is correct
 //            this.updateMinimumStaff(startDate, endDate);
-			throw new Error('MINIMUMSTAFF is empty!');
+			//throw new Error('MINIMUMSTAFF is empty!');
+            console.log("MINIMUMSTAFF is empty");
         }
 
         //check parameters startDate endDate is correct

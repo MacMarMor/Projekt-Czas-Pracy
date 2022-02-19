@@ -50,7 +50,7 @@ app.post('/generate', (req, res) => {
 	var promise = db.getEmployees();
 	promise.then(function(json) {
         EmpS.updateEmployees(json);
-        });
+    });
           
 
     var promise2 = db.getSchedule();

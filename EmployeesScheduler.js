@@ -89,10 +89,10 @@ class EmployeesScheduler {
         var obj = JSON.parse(JSON.stringify(json));
 
         //new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
-        //var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
+        var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
 
 
-        console.log("obj = "+obj[0].dniPracy[0].startPracy.date.year);
+        console.log("obj = "+date);
 		
 		this.EMPLOYEE = json;
     }

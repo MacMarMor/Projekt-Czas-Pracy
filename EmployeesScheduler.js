@@ -111,9 +111,9 @@ class EmployeesScheduler {
 
         var obj = JSON.parse(JSON.stringify(json));
 
-        console.log(obj[0].grafik["2022-01-15"]);
+        console.log(Array.from(obj[0].grafik["2022-01-15"]));
 
-        this.MINIMUMSTAFF = Array.from(obj);
+        this.MINIMUMSTAFF = Array.from(obj[0].grafik["2022-01-15"]);
 
         
         

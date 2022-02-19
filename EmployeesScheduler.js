@@ -27,7 +27,7 @@ class EmployeesScheduler {
         }
         else
         {
-            console.log("setSchedule = "+this.MINIMUMSTAFF);
+            console.log("setSchedule = "+this.MINIMUMSTAFF.length);
         }
         //check parameters startDate endDate is correct
         

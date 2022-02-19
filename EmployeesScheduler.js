@@ -27,15 +27,16 @@ class EmployeesScheduler {
         }
         else
         {
-            console.log("setSchedule = "+this.MINIMUMSTAFF.length);
+            console.log("setSchedule = "+this.MINIMUMSTAFF.len);
         }
         //check parameters startDate endDate is correct
         
         //while MinimumStaff > staffWorked at time
-        /*for(var i = 0; this.MINIMUMSTAFF.count() > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
+        for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
             while (this.getMinimumStaffAt(i) < getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
+                console.log(this.getMinimumStaffAt(i)+" "+this.getStaffWorkedAt(i));
                 //need 4h or 8h employee? -> shiftTime
-                var shiftTime;
+                /*var shiftTime;
                 for(j=0;j<7;j++){ //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
                     if(this.getMinimumStaffAt(i+j) > 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
 						//czyli sprawdzamy czy jest jeszcze zapotrzebowanie
@@ -67,9 +68,9 @@ class EmployeesScheduler {
                         else
                             j++;
                     }
-                }
+                }*/
             }
-        }*/
+        }
     }
 
     setMonth(month){
@@ -124,11 +125,12 @@ class EmployeesScheduler {
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value
-        return this.MINIMUMSTAFF[time];
+        return this.MINIMUMSTAFF[time].iloscOsob;
     }
     
     getStaffWorkedAt(time){ // from MINIMUMSTAFF get value
         // [0 0 0 0 0 0 0 0]
+        return this.MINIMUMSTAFF[time].pracownicy.length;
     }
 
     prepreJSON_EmployeeShift(employee){

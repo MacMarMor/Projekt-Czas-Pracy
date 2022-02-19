@@ -106,7 +106,7 @@ class EmployeesScheduler {
 		//console.log(Array.from(obj))
     
 		this.EMPLOYEE = Array.from(obj);
-        console.log(this.EMPLOYEE)
+        //console.log(this.EMPLOYEE)
     }
     
     updateMinimumStaff(json){ // request db for employees list

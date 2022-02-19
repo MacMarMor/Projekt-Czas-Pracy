@@ -18,15 +18,13 @@ class EmployeesScheduler {
 //            this.updateEmployees();
 			throw new Error('EMPLOYEE is empty!');
         }
-        else
-        {
-            console.log("ilosc = "+this.EMPLOYEE.length)
-        }
+
         //console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
-        /* (this.MINIMUMSTAFF.count() == 0) { //check MinimumStaff data is correct
+        if (this.MINIMUMSTAFF.count() == 0) { 
+            //check MinimumStaff data is correct
 //            this.updateMinimumStaff(startDate, endDate);
 			throw new Error('MINIMUMSTAFF is empty!');
-        }*/
+        }
         //check parameters startDate endDate is correct
         
         //while MinimumStaff > staffWorked at time
@@ -106,8 +104,9 @@ class EmployeesScheduler {
         //grafik.json
 		
         //JSON_EmployeeShift =
-		this.MINIMUMSTAFF = json[0].grafik; // musi zwrócić tablice 24-elementową z dnia aktualnego
-        console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
+        
+		this.MINIMUMSTAFF = JSON.parse(JSON.stringify(json))[0]; // musi zwrócić tablice 24-elementową z dnia aktualnego
+        //console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
 
         this.MINIMUMSTAFF = json;
     }

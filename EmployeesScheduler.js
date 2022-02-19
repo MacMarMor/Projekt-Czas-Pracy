@@ -111,9 +111,9 @@ class EmployeesScheduler {
 
         var obj = JSON.parse(JSON.stringify(json));
 
-        console.log("upadte mininum staff = "+obj[0]);
+        console.log("upadte mininum staff = "+obj);
 
-        this.MINIMUMSTAFF = obj[0].grafik;
+        //this.MINIMUMSTAFF = obj[0].grafik[0];
         //console.log(this.MINIMUMSTAFF.length);
 
         

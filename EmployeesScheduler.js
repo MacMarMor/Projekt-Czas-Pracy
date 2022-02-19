@@ -20,7 +20,7 @@ class EmployeesScheduler {
         }
 
         //console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
-        if (this.MINIMUMSTAFF.count() == 0) { 
+        if (this.MINIMUMSTAFF.length == 0) { 
             //check MinimumStaff data is correct
 //            this.updateMinimumStaff(startDate, endDate);
 			throw new Error('MINIMUMSTAFF is empty!');
@@ -112,7 +112,7 @@ class EmployeesScheduler {
 		this.MINIMUMSTAFF = JSON.parse(JSON.stringify(json))[0]; // musi zwrócić tablice 24-elementową z dnia aktualnego
         //console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
 
-        this.MINIMUMSTAFF = json;
+        //this.MINIMUMSTAFF = json;
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value

@@ -96,9 +96,10 @@ class EmployeesScheduler {
         //new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
         //var date = new Date(obj[0].dniPracy[0].startPracy.date.year, obj[0].dniPracy[0].startPracy.date.month, obj[0].dniPracy[0].startPracy.date.day)
         //console.log("obj = "+date);
-		console.log(Array.from(obj))
+		//console.log(Array.from(obj))
     
 		this.EMPLOYEE = Array.from(obj.length);
+        console.log(this.EMPLOYEE)
     }
     
     updateMinimumStaff(json){ // request db for employees list

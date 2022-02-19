@@ -27,7 +27,7 @@ class EmployeesScheduler {
         }
         else
         {
-            console.log(this.MINIMUMSTAFF);
+            console.log("setSchedule = "+this.MINIMUMSTAFF);
         }
         //check parameters startDate endDate is correct
         
@@ -114,7 +114,7 @@ class EmployeesScheduler {
         console.log("upadte mininum staff = "+obj[0].grafik["2022-01-15"]);
 
         this.MINIMUMSTAFF = obj[0].grafik["2022-01-15"]["dane"];
-        console.log(this.MINIMUMSTAFF.length);
+        //console.log(this.MINIMUMSTAFF.length);
 
         
 		//this.MINIMUMSTAFF = JSON.parse(JSON.stringify(json))[0]; // musi zwrócić tablice 24-elementową z dnia aktualnego

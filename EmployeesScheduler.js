@@ -41,7 +41,7 @@ class EmployeesScheduler {
         //while MinimumStaff > staffWorked at time
         for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
             while (this.getMinimumStaffAt(i) < this.getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
-                console.log(this.getMinimumStaffAt(i));
+                console.log("minimumstaff = "+this.getMinimumStaffAt(i));
                 console.log(this.getStaffWorkedAt(i));
                 //need 4h or 8h employee? -> shiftTime
                 /*var shiftTime;

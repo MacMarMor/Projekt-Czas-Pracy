@@ -86,8 +86,8 @@ class EmployeesScheduler {
 		//console.log("json.id: "+json[0]._id);
 
         //console.log(typeof(json))
-        obj = JSON.parse(json);
-        console.log(obj[0]);
+        obj = JSON.parse(JSON.stringify(json));
+        console.log("obj = "+obj[0]);
 		
 		this.EMPLOYEE = json;
     }

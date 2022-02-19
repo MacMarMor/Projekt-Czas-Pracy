@@ -58,9 +58,9 @@ app.post('/generate', (req, res) => {
 	});
 	
 	EmpS.setSchedule();
-	var dfghf = EmpS.getEmployee_Scheduled();
+	//var dfghf = EmpS.getEmployee_Scheduled();
 
-    console.log(dfghf)
+    //console.log(dfghf)
 	
 	//TODO: Send data to client
     //res.send();

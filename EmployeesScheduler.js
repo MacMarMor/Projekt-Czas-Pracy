@@ -31,7 +31,7 @@ class EmployeesScheduler {
         for (var i = 0; i<this.MINIMUMSTAFF.length; i++)
         {
             console.log("minimum staff = "+this.getMinimumStaffAt(i));
-            console.log("worked = "+this.getStaffWorkedAt(i));
+            this.getStaffWorkedAt(i);
         }
 
         
@@ -134,6 +134,7 @@ class EmployeesScheduler {
     
     getStaffWorkedAt(time){ // from MINIMUMSTAFF get value
         // [0 0 0 0 0 0 0 0]
+        console.log(this.MINIMUMSTAFF[time].pracownicy.length);
         return this.MINIMUMSTAFF[time].pracownicy.length;
     }
 

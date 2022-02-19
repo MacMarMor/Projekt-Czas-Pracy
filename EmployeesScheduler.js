@@ -93,7 +93,7 @@ class EmployeesScheduler {
 
 
         //console.log("obj = "+date);
-		console.log(obj)
+		console.log(typeof(obj))
 		this.EMPLOYEE = json;
     }
     

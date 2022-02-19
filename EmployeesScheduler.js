@@ -25,6 +25,10 @@ class EmployeesScheduler {
 //            this.updateMinimumStaff(startDate, endDate);
 			throw new Error('MINIMUMSTAFF is empty!');
         }
+        else
+        {
+            console.log(this.MINIMUMSTAFF);
+        }
         //check parameters startDate endDate is correct
         
         //while MinimumStaff > staffWorked at time

@@ -13,7 +13,7 @@ class EmployeesScheduler {
     }
     
     setSchedule(){ //startDate, endDate){
-        console.log("I'm in setSchedule()")
+        console.log("I'm in setSchedule")
         if (this.EMPLOYEE.length == 0) { //check Employees data is correct
 //            this.updateEmployees();
 			throw new Error('EMPLOYEE is empty!');

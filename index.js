@@ -57,8 +57,10 @@ app.post('/generate', (req, res) => {
         EmpS.updateMinimumStaff(json);
 	});
 	
-//	EmpS.setSchedule();
-//	var dfghf = EmpS.getEmployee_Scheduled();
+	EmpS.setSchedule();
+	var dfghf = EmpS.getEmployee_Scheduled();
+
+    console.log(dfghf)
 	
 	//TODO: Send data to client
     //res.send();

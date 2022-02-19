@@ -138,7 +138,7 @@ class EmployeesScheduler {
     
     getStaffWorkedAt(time){ // from MINIMUMSTAFF get value
         // [0 0 0 0 0 0 0 0]
-        console.log(this.MINIMUMSTAFF[time].pracownicy.length);
+        //console.log(this.MINIMUMSTAFF[time].pracownicy.length);
         return this.MINIMUMSTAFF[time].pracownicy.length;
     }
 

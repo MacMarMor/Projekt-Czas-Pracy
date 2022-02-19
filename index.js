@@ -95,8 +95,8 @@ app.post('/generate', (req, res) => {
     app.listen(4000, ()=>{
         console.log("raport generate");
     })};    
-    res.send();
+    res.send();*/
 
 
-    res.render('pages/generuj_grafik');*/
+    res.render('pages/generuj_grafik');
 });

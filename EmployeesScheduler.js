@@ -113,7 +113,7 @@ class EmployeesScheduler {
 
         var obj1 = obj[0];
 
-        console.log(Object.values(obj));
+        console.log(Array.from(obj));
 
         this.MINIMUMSTAFF = Array.from(obj1);
 

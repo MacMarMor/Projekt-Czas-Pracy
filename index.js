@@ -64,7 +64,12 @@ app.post('/generate', (req, res) => {
 
             for (var i = 0; i<24; i++)
             {
-                console.log(result[i].iloscOsob+" "+result[i].pracownicy.imie+" "+result[i].pracownicy.nazwisko);
+                console.log(result[i].iloscOsob);
+
+                for (var j = 0; j<result[i].pracownicy.length; j++)
+                {
+                    console.log(result[i].pracownicy[j].imię+" "+result[i].pracownicy[j].nazwisko);
+                }
             }
 
             

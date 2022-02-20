@@ -4,7 +4,7 @@ class EmployeesScheduler {
     
     EMPLOYEE = new Array;
     MINIMUMSTAFF = new Array;
-    Employee_Scheduled =  MINIMUMSTAFF;
+    Employee_Scheduled =  this.MINIMUMSTAFF;
 
     JSON_EmployeeShift;
 

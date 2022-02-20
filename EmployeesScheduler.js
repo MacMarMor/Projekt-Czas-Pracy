@@ -67,7 +67,7 @@ class EmployeesScheduler {
                 while (this.getMinimumStaffAt(i) > this.getStaffWorkedAt(i)){
                 {
                     var shiftTime = 0;
-                    for(j=0;j<7;j++)
+                    for(var j=0;j<7;j++)
                     { 
                         //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
                         if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
@@ -75,7 +75,7 @@ class EmployeesScheduler {
                     }
                 
 
-                j = 0;
+                var j = 0;
                 while(j < this.EMPLOYEE.length) // i < Employee.length//get employee while employee shift != shiftTime TODO: zmienić pętle
                 {
                     console.log("j = "+j);

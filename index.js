@@ -97,6 +97,10 @@ app.post('/generate', (req, res) => {
     })};    
     res.send();*/
 
-    res.send("abcd");
+    app.onload = function() {
+        res.json({1: "a", 2: "b"});
+    }
+
+    res.send();
     res.render('pages/generuj_grafik');
 });

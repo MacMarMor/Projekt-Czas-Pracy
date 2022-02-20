@@ -166,8 +166,9 @@ class EmployeesScheduler {
     {
         for (var j = hour; j < hour+employee.staz; j++)
         {
-            this.MINIMUMSTAFF[j].iloscOsob = this.MINIMUMSTAFF[j].iloscOsob--;
-            this.MINIMUMSTAFF[j].pracownicy.push(employee);
+            this.MINIMUMSTAFF[j].iloscOsob = (this.MINIMUMSTAFF[j].iloscOsob)-1;
+            console.log(this.MINIMUMSTAFF[j].iloscOsob);
+            //this.MINIMUMSTAFF[j].pracownicy.push(employee);
         }
     }
 

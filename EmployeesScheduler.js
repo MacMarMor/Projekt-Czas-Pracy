@@ -67,11 +67,14 @@ class EmployeesScheduler {
             while (this.getMinimumStaffAt(i) > this.getStaffWorkedAt(i))
             {
                 var shiftTime = 0;
-                for(var j=0;j<7;j++)
+                for(var j=0;j<8;j++)
                 { 
-                    //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
-                    if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
+                    if (i < 17)
+                    {
+                        if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
                         shiftTime++;
+                    }
+                    //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
                 }
 
                 var j = 0;

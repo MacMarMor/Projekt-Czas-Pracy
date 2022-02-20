@@ -46,7 +46,7 @@ class EmployeesScheduler {
                 //need 4h or 8h employee? -> shiftTime
                 var shiftTime;
                 for(j=0;j<7;j++){ //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
-                    if(this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
+                    if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
 						//czyli sprawdzamy czy jest jeszcze zapotrzebowanie
                         shiftTime++;
                 }

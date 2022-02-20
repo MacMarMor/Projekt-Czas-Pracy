@@ -193,16 +193,16 @@ class EmployeesScheduler {
         //console.log("EmployeeShift = "+employee);
         employee.dniPracy.push(sp);
         this.Employee_Scheduled.push(i, employee);
-        console.log("ok");
+        //console.log("ok");
     }
 
     prepreJSON_MinimumStaff(employee, hour)
     {
         for (var j = hour; j < hour+employee.staz-1; j++)
         {
-            //this.MINIMUMSTAFF[j].iloscOsob = (this.MINIMUMSTAFF[j].iloscOsob)-1;
-            //console.log(this.MINIMUMSTAFF[j].iloscOsob);
-            //this.MINIMUMSTAFF[j].pracownicy.push(employee);
+            this.MINIMUMSTAFF[j].iloscOsob = (this.MINIMUMSTAFF[j].iloscOsob)-1;
+            console.log(this.MINIMUMSTAFF[j].iloscOsob);
+            this.MINIMUMSTAFF[j].pracownicy.push(employee);
         }
     }
 

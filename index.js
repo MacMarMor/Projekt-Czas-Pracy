@@ -101,6 +101,6 @@ app.post('/generate', (req, res) => {
         res.json({1: "a", 2: "b"});
     }
 
-    res.send();
+    //res.send();
     res.render('pages/generuj_grafik');
 });

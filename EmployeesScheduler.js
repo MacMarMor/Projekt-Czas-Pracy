@@ -187,7 +187,7 @@ class EmployeesScheduler {
 
     prepreJSON_EmployeeShift(employee, i)
     {
-        sp = new startPracy(new startPracy(new date(2022, 2, 19), new time(i, 0, 0)), employee.staz)
+        var sp = new startPracy(new startPracy(new date(2022, 2, 19), new time(i, 0, 0)), employee.staz)
         //console.log("EmployeeShift = "+employee);
         employee.dniPracy.push(sp);
         //this.Employee_Scheduled.push(i, employee);

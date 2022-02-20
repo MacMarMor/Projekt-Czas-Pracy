@@ -74,6 +74,7 @@ class EmployeesScheduler {
 
                 while(j < this.EMPLOYEE.length) // i < Employee.length//get employee while employee shift != shiftTime TODO: zmienić pętle
                 {
+                    console.log("j = "+j);
                     if (shiftTime < 5)
                     {
                         if(this.EMPLOYEE[j].staz == 4)
@@ -83,6 +84,7 @@ class EmployeesScheduler {
                             this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
                             //break;
                             j++;
+                            i = i+4;
                         }
                         else
                         {
@@ -96,6 +98,7 @@ class EmployeesScheduler {
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
                             this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
                             //break;
+                            i = i+8;
                             j++;
                         }
                         else

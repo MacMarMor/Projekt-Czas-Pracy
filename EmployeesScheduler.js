@@ -49,7 +49,7 @@ class EmployeesScheduler {
                         {
                             //console.log(this.EMPLOYEE[i]);
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j], i);
-                            this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            //this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
                             break;
                         }
                         else
@@ -62,7 +62,7 @@ class EmployeesScheduler {
                         if(this.EMPLOYEE[j].staz == 8)
                         {
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
-                            this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            //this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
                             break;
                         }
                         else
@@ -167,7 +167,7 @@ class EmployeesScheduler {
         for (var j = hour; j < hour+employee.staz-1; j++)
         {
             //this.MINIMUMSTAFF[j].iloscOsob = (this.MINIMUMSTAFF[j].iloscOsob)-1;
-            console.log(this.MINIMUMSTAFF[j].iloscOsob);
+            //console.log(this.MINIMUMSTAFF[j].iloscOsob);
             //this.MINIMUMSTAFF[j].pracownicy.push(employee);
         }
     }

@@ -62,6 +62,7 @@ class EmployeesScheduler {
                             //console.log(this.EMPLOYEE[i]);
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
                             //this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            break;
                         }
                         else
                             j++;
@@ -74,6 +75,7 @@ class EmployeesScheduler {
                         if(this.EMPLOYEE[j].staz == 4){
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
                             //this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            break;
                         }
                         else
                             j++;

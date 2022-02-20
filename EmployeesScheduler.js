@@ -29,14 +29,6 @@ class EmployeesScheduler {
         }
 
         //check parameters startDate endDate is correct
-
-        /*for (var i = 0; i<this.MINIMUMSTAFF.length; i++)
-        {
-            console.log("JESTEM W PETLI")
-            console.log("minimum staff = "+this.getMinimumStaffAt(i));
-            this.getStaffWorkedAt(i);
-        }*/
-
         
         //while MinimumStaff > staffWorked at time
         for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
@@ -44,45 +36,45 @@ class EmployeesScheduler {
                 //console.log("minimumstaff = "+this.getMinimumStaffAt(i));
                 //console.log("worked staff = "+this.getStaffWorkedAt(i));
                 //need 4h or 8h employee? -> shiftTime
-                var shiftTime;
+                var shiftTime = 0;
                 for(j=0;j<7;j++){ //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
                     if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
 						//czyli sprawdzamy czy jest jeszcze zapotrzebowanie
                         shiftTime++;
                 }
-				
-                while(true)
+                var j = 0;
+                while(j < this.EMPLOYEE.length) // i < Employee.length//get employee while employee shift != shiftTime TODO: zmienić pętle
                 {
                     if (shiftTime < 5)
                     {
-                        var j = 0;
-					    while (true) {//get employee while employee shift != shiftTime TODO: zmienić pętle
                         if(this.EMPLOYEE[j].staz == 4)
                         {
                             //console.log(this.EMPLOYEE[i]);
-                            this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
-                            //this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            this.prepreJSON_EmployeeShift(this.EMPLOYEE[j], i);
+                            this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
                             break;
                         }
                         else
+                        {
                             j++;
                         }
                     }
                     else
                     {
-                        var j = 0;
-					    while (true) {//get employee while employee shift != shiftTime TODO: zmienić pętle
-                        if(this.EMPLOYEE[j].staz == 4){
+                        if(this.EMPLOYEE[j].staz == 8)
+                        {
                             this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
-                            //this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
                             break;
                         }
                         else
+                        {
                             j++;
                         }
                     }
-                
                 }
+                
+                
 
                 /*if(shiftTime < 5) {//4h shift
 					var j = 0;
@@ -108,8 +100,8 @@ class EmployeesScheduler {
                         }
                         else
                             j++;
-                    }
-                }*/
+                    }*/
+                
             }
         }
     }
@@ -185,7 +177,8 @@ class EmployeesScheduler {
         //this.Employee_Scheduled.push(i, employee);
     }
 
-    prepreJSON_MinimumStaff(employee, hour){
+    prepreJSON_MinimumStaff(employee, hour)
+    {
         for (var j = hour; j < hour+employee.staz; j++)
         {
             this.MINIMUMSTAFF[j].iloscOsob = this.MINIMUMSTAFF[i].iloscOsob--;
@@ -193,7 +186,8 @@ class EmployeesScheduler {
         }
     }
 
-    getEmployee_Scheduled(){
+    getEmployee_Scheduled()
+    {
         return this.Employee_Scheduled;
     }
 

@@ -176,9 +176,9 @@ class EmployeesScheduler {
 		
 		//zapisać do nowej tablicy this.Employee_Scheduled
 
-
-        this.employee.dniPracy.push(new startPracy(new Date(2022, 2, 19), new Time(i, 0, 0)), employee.staz);
-        this.Employee_Scheduled.push(i, employee);
+        console.log(this.employee.dniPracy);
+        //this.employee.dniPracy.push(new startPracy(new Date(2022, 2, 19), new Time(i, 0, 0)), employee.staz);
+        //this.Employee_Scheduled.push(i, employee);
     }
 
     prepreJSON_MinimumStaff(employee, hour){

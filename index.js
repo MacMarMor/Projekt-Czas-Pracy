@@ -59,25 +59,21 @@ app.post('/generate', (req, res) => {
             EmpS.updateMinimumStaff(json);
         //EmpS.setSchedule();
             EmpS.setSchedule();
+            var result = EmpS.MINIMUMSTAFF;
+            console.log(result)
+
+            app.onload = function() {
+                res.json({1: "a", 2: "b"});
+            }
+        
+            //SEND MUSI BYC W TYM MIEJSCU!!!!
+
+            res.send(null);
         });
 
     });
-          
-
-
-    //EmpS.setSchedule();
-
-    //EmpS.setSchedule();
-
-	/*var promise2 = db.getSchedule();
-	promise2.then(function(json) {
-        EmpS.updateMinimumStaff(json);
-	});*/
-
-	
-	var dfghf = EmpS.getEmployee_Scheduled();
-
-    console.log(dfghf)
+        
+	//var dfghf = EmpS.getEmployee_Scheduled();
 	
 	//TODO: Send data to client
     /*function sendToCLint(s){
@@ -97,10 +93,6 @@ app.post('/generate', (req, res) => {
     })};    
     res.send();*/
 
-    app.onload = function() {
-        res.json({1: "a", 2: "b"});
-    }
 
-    res.send(null);
     res.render('pages/generuj_grafik');
 });

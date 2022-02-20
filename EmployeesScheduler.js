@@ -1,5 +1,35 @@
 const { defaultConfiguration } = require("express/lib/application");
 
+class startPracy
+{
+    constructor(date, time)
+    {
+        this.date = date;
+        this.time = time;
+    }
+}
+
+class date
+{
+    constructor(year, month, day)
+    {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }
+}
+
+class time
+{
+    constructor(hour, minute, second, nano)
+    {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+        this.nano = nano;
+    }
+}
+
 class EmployeesScheduler {
     
     EMPLOYEE = new Array;
@@ -144,7 +174,6 @@ class EmployeesScheduler {
 
         this.MINIMUMSTAFF = obj[0].grafik["2022-02-19"].dane;
         console.log(this.MINIMUMSTAFF.length);
-
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value
@@ -155,10 +184,10 @@ class EmployeesScheduler {
         return this.MINIMUMSTAFF[time].pracownicy.length;
     }
 
-    prepreJSON_EmployeeShift(employee, i){
-
+    prepreJSON_EmployeeShift(employee, i)
+    {
         //console.log("EmployeeShift = "+employee);
-        employee.dniPracy.push(new startPracy(new Date(2022, 2, 19), new Time(i, 0, 0)), employee.staz);
+        employee.dniPracy.push(new startPracy(new date(2022, 2, 19), new time(i, 0, 0)), employee.staz);
         //this.Employee_Scheduled.push(i, employee);
     }
 

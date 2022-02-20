@@ -176,7 +176,7 @@ class EmployeesScheduler {
 		
 		//zapisać do nowej tablicy this.Employee_Scheduled
 
-        console.log(this.employee.dniPracy);
+        console.log(this.employee);
         //this.employee.dniPracy.push(new startPracy(new Date(2022, 2, 19), new Time(i, 0, 0)), employee.staz);
         //this.Employee_Scheduled.push(i, employee);
     }

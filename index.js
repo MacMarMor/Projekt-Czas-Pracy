@@ -68,7 +68,7 @@ app.post('/generate', (req, res) => {
         
             //SEND MUSI BYC W TYM MIEJSCU!!!!
 
-            res.send(null);
+            res.send("Wyslalismy do klienta");
         });
 
     });

@@ -157,7 +157,7 @@ class EmployeesScheduler {
 
     prepreJSON_EmployeeShift(employee, i){
 
-        console.log("EmployeeShift = "+this.employee);
+        console.log("EmployeeShift = "+employee);
         //this.employee.dniPracy.push(new startPracy(new Date(2022, 2, 19), new Time(i, 0, 0)), employee.staz);
         //this.Employee_Scheduled.push(i, employee);
     }
@@ -166,7 +166,7 @@ class EmployeesScheduler {
     {
         for (var j = hour; j < hour+employee.staz; j++)
         {
-            this.MINIMUMSTAFF[j].iloscOsob = this.MINIMUMSTAFF[i].iloscOsob--;
+            this.MINIMUMSTAFF[j].iloscOsob = this.MINIMUMSTAFF[j].iloscOsob--;
             this.MINIMUMSTAFF[j].pracownicy.push(employee);
         }
     }

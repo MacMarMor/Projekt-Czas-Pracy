@@ -2,10 +2,11 @@ const { defaultConfiguration } = require("express/lib/application");
 
 class startPracy
 {
-    constructor(date, time)
+    constructor(date, time, iloscPrzepracowanychGodzin)
     {
         this.date = date;
         this.time = time;
+        this.iloscPrzepracowanychGodzin = iloscPrzepracowanychGodzin;
     }
 }
 
@@ -186,9 +187,9 @@ class EmployeesScheduler {
 
     prepreJSON_EmployeeShift(employee, i)
     {
-        startPracy = new startPracy(new startPracy(new date(2022, 2, 19), new time(i, 0, 0)), employee.staz)
+        sp = new startPracy(new startPracy(new date(2022, 2, 19), new time(i, 0, 0)), employee.staz)
         //console.log("EmployeeShift = "+employee);
-        employee.dniPracy.push(startPracy);
+        employee.dniPracy.push(sp);
         //this.Employee_Scheduled.push(i, employee);
     }
 

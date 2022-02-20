@@ -6,6 +6,8 @@ class EmployeesScheduler {
     MINIMUMSTAFF = new Array;
     Employee_Scheduled =  this.MINIMUMSTAFF;
 
+    numberOfMissingEmployees = new Array;
+
     JSON_EmployeeShift;
 
     constructor () {
@@ -14,16 +16,11 @@ class EmployeesScheduler {
     
     setSchedule(){ //startDate, endDate){
         console.log("I'm in setSchedule: "+ this.EMPLOYEE.length +" "+this.MINIMUMSTAFF.length)
-        if (this.EMPLOYEE.length == 0) { //check Employees data is correct
-//            this.updateEmployees();
+        if (this.EMPLOYEE.length == 0) {
 			//throw new Error('EMPLOYEE is empty!');
             console.log("Employee is empty");
         }
-
-        //console.log("EMPLOYEE.count() "+this.EMPLOYEE.count());
         if (this.MINIMUMSTAFF.length == 0) { 
-            //check MinimumStaff data is correct
-//            this.updateMinimumStaff(startDate, endDate);
 			//throw new Error('MINIMUMSTAFF is empty!');
             console.log("MINIMUMSTAFF is empty");
         }
@@ -31,18 +28,19 @@ class EmployeesScheduler {
         //check parameters startDate endDate is correct
         
         //while MinimumStaff > staffWorked at time
-        for(var i = 0; this.MINIMUMSTAFF.length > i; i++){ //MINIMUMSTAFF -> [5 4 4 2 2 2 2 3 5 6 8 8 9 11 18 19 15]
-            while (this.getMinimumStaffAt(i) > this.getStaffWorkedAt(i)){ //czy ktoś już jest zagrafikowany
-                //console.log("minimumstaff = "+this.getMinimumStaffAt(i));
-                //console.log("worked staff = "+this.getStaffWorkedAt(i));
-                //need 4h or 8h employee? -> shiftTime
+        for(var i = 0; this.MINIMUMSTAFF.length > i; i++)
+        { 
+            while (this.getMinimumStaffAt(i) > this.getStaffWorkedAt(i)){
+  
                 var shiftTime = 0;
-                for(j=0;j<7;j++){ //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
+                for(j=0;j<7;j++)
+                { 
+                    //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
                     if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
-						//czyli sprawdzamy czy jest jeszcze zapotrzebowanie
                         shiftTime++;
                 }
                 var j = 0;
+
                 while(j < this.EMPLOYEE.length) // i < Employee.length//get employee while employee shift != shiftTime TODO: zmienić pętle
                 {
                     if (shiftTime < 5)
@@ -139,9 +137,6 @@ class EmployeesScheduler {
     }
     
     updateMinimumStaff(json){ // request db for employees list
-        //grafik.json
-		
-        //JSON_EmployeeShift =
 
         var obj = JSON.parse(JSON.stringify(json));
 
@@ -150,27 +145,17 @@ class EmployeesScheduler {
         this.MINIMUMSTAFF = obj[0].grafik["2022-02-19"].dane;
         console.log(this.MINIMUMSTAFF.length);
 
-        
-		//this.MINIMUMSTAFF = JSON.parse(JSON.stringify(json))[0]; // musi zwrócić tablice 24-elementową z dnia aktualnego
-        //console.log("testEMPS testminStaff: "+JSON.stringify(json, null, 4))
-
-        //this.MINIMUMSTAFF = json;
     }
     
     getMinimumStaffAt(time){ // from MINIMUMSTAFF get value
         return this.MINIMUMSTAFF[time].iloscOsob;
     }
     
-    getStaffWorkedAt(time){ // from MINIMUMSTAFF get value
-        // [0 0 0 0 0 0 0 0]
-        //console.log(this.MINIMUMSTAFF[time].pracownicy.length);
+    getStaffWorkedAt(time){ 
         return this.MINIMUMSTAFF[time].pracownicy.length;
     }
 
     prepreJSON_EmployeeShift(employee, i){
-         //grafik.json
-		
-		//zapisać do nowej tablicy this.Employee_Scheduled
 
         console.log("EmployeeShift = "+this.employee);
         //this.employee.dniPracy.push(new startPracy(new Date(2022, 2, 19), new Time(i, 0, 0)), employee.staz);

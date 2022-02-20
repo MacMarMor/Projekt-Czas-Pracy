@@ -177,15 +177,15 @@ class EmployeesScheduler {
 		//zapisać do nowej tablicy this.Employee_Scheduled
 
 
-        this.employee.append("2022-01-19", staz);
-        this.Employee_Scheduled.append(i, employee);
+        this.employee.push("2022-01-19", staz);
+        this.Employee_Scheduled.push(i, employee);
     }
 
     prepreJSON_MinimumStaff(employee, hour){
         for (var j = hour; j < hour+employee.staz; j++)
         {
             this.MINIMUMSTAFF[j].iloscOsob = this.MINIMUMSTAFF[i].iloscOsob--;
-            this.MINIMUMSTAFF[j].pracownicy.append(employee);
+            this.MINIMUMSTAFF[j].pracownicy.push(employee);
         }
     }
 

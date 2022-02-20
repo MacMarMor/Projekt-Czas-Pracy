@@ -45,7 +45,8 @@ class EmployeesScheduler {
         console.log("Im work!! bLah");
     }
     
-    setSchedule(){ //startDate, endDate){
+    setSchedule()
+    { //startDate, endDate){
         console.log("I'm in setSchedule: "+ this.EMPLOYEE.length +" "+this.MINIMUMSTAFF.length)
         if (this.EMPLOYEE.length == 0) {
 			//throw new Error('EMPLOYEE is empty!');
@@ -63,17 +64,15 @@ class EmployeesScheduler {
         //while MinimumStaff > staffWorked at time
         for(var i = 0; this.MINIMUMSTAFF.length > i; i++)
         { 
-            //update minimumstaff
-                while (this.getMinimumStaffAt(i) > this.getStaffWorkedAt(i)){
-                {
-                    var shiftTime = 0;
-                    for(var j=0;j<7;j++)
-                    { 
-                        //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
-                        if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
-                            shiftTime++;
-                    }
-                
+            while (this.getMinimumStaffAt(i) > this.getStaffWorkedAt(i))
+            {
+                var shiftTime = 0;
+                for(var j=0;j<7;j++)
+                { 
+                    //sprawdzamy czy potrzebujemy kogos na 4 czy 8h. [1 1 1 0 0 0 1 0] => 4h /// [1 1 1 0 1 1 1 1] => 8h
+                    if(this.getMinimumStaffAt(i+j) - this.getStaffWorkedAt(i+j)> 0) //TODO: tutaj nie > 0 tylko  > this.getMinimumStaffAt(i+j) - getStaffWorkedAt(i+j)
+                        shiftTime++;
+                }
 
                 var j = 0;
                 while(j < this.EMPLOYEE.length) // i < Employee.length//get employee while employee shift != shiftTime TODO: zmienić pętle
@@ -97,22 +96,20 @@ class EmployeesScheduler {
                     }
                     else
                     {
-                            if(this.EMPLOYEE[j].staz == 8)
-                            {
-                                this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
-                                this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
-                                break;
-                                //i = i+8;
-                                //j++;
-                            }
-                            else
-                            {
-                                j++;
-                            }
+                        if(this.EMPLOYEE[j].staz == 8)
+                        {
+                            this.prepreJSON_EmployeeShift(this.EMPLOYEE[j]);
+                            this.prepreJSON_MinimumStaff(this.EMPLOYEE[j], i);
+                            break;
+                            //i = i+8;
+                            //j++;
+                        }
+                        else
+                        {
+                            j++;
+                        }
                     }
-                }
-                
-            
+                    
                 }
             }
         }

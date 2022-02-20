@@ -60,7 +60,14 @@ app.post('/generate', (req, res) => {
         //EmpS.setSchedule();
             EmpS.setSchedule();
             var result = EmpS.MINIMUMSTAFF;
-            console.log(result)
+
+
+            for (var i = 0; i<24; i++)
+            {
+                console.log(result[i].iloscOsob+" "+result[i].pracownicy)
+            }
+
+            
 
             app.onload = function() {
                 res.json({1: "a", 2: "b"});
